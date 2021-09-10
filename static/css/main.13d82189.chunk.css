@@ -6,6 +6,26 @@
     url(../../static/media/Agustina.21f233e1.woff) format("woff");
 }
 @font-face {
+  font-family: Apalu Regular;
+  font-style: normal;
+  font-weight: 200;
+  src: local("Apalu Regular"), url(../../static/media/Apalu.woff) format("woff");
+}
+@font-face {
+  font-family: GardeniaSummer Regular;
+  font-style: normal;
+  font-weight: 200;
+  src: local("GardeniaSummer Regular"),
+    url(../../static/media/GardeniaSummer.woff) format("woff");
+}
+@font-face {
+  font-family: CreattionDemo Regular;
+  font-style: normal;
+  font-weight: 200;
+  src: local("CreattionDemo Regular"),
+    url(../../static/media/CreattionDemo.woff) format("woff");
+}
+@font-face {
   font-family: Montserrat;
   src: local("Montserrat"),
     url(../../static/media/Montserrat-Regular.ee653992.ttf) format("woff");
@@ -169,9 +189,10 @@ body {
   line-height: normal;
 }
 .header .logo-name {
-  font-family: Agustina Regular;
-  font-weight: 700;
-  padding: 0 10px;
+  font-family: Apalu Regular;
+  font-weight: 400;
+  font-size: 40px;
+  padding: 0px 10px;
 }
 .menu {
   font-family: Google Sans Regular;
