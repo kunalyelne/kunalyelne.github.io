@@ -305,7 +305,7 @@
         b =
           "A Versatile Software Engineer with training and experience in Java and Android programming. I take great care in the experience, architecture, and code quality of the things I build.",
         M =
-          "https://drive.google.com/file/d/1wCuEXz8pSCqLw1i-7HuPw7qryXaC2p8r/view?usp=sharing",
+          "https://drive.google.com/file/d/1ev6gTJMRS1vKSXBbtrAdaMjopfXRJGHB/view?usp=sharing",
         v = "https://github.com/kunalyelne",
         x = [
           {
