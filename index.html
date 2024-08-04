@@ -1,0 +1,1145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+
+  <!--
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./assets/images/logo.ico" type="image/x-icon">
+
+  <!--
+    - custom css links
+  -->
+  <!-- <link id="theme-link rel="stylesheet" href="./assets/css/darkmode.css" id="dark-mode"> -->
+  <link id="theme-link" rel="stylesheet" href="./assets/css/lightmode.css" id="light-mode">
+
+  <!--
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Add Font Awesome CDN link -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+
+<body>
+
+  <!--
+    - #MAIN
+  -->
+  <button id="mode-toggle" class="mode-toggle">
+    <i id="mode-icon" class="fas fa-sun"></i> <!-- Initial icon for light mode -->
+  </button>
+
+  <main>
+
+    <!--
+      - #SIDEBAR
+    -->
+
+    <aside class="sidebar" data-sidebar>
+
+      <div class="sidebar-info">
+
+        <figure class="avatar-box">
+          <img src="./assets/images/profile-avatar.png" alt="Your Name" width="100">
+        </figure>
+
+        <div class="info-content">
+          <h1 class="name" title="Your Name">Kunal Yelne</h1>
+
+          <p class="title"> Software Engineer </p>
+        </div>
+
+        <button style="background: white; color: black;" class="info_more-btn" data-sidebar-btn>
+          <span style="color: white ;" >Show Contact Details</span>
+
+          <ion-icon style="background: white; color: black;" name="chevron-down"></ion-icon>
+        </button>
+
+      </div>
+
+      <div class="sidebar-info_more">
+
+        <div class="separator"></div>
+
+        <ul class="contacts-list">
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="mail-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <!-- <p class="contact-title">Email</p> -->
+
+              <a href="mailto:kunal.s.yelne@gmail.com" class="contact-link">kunal.s.yelne@gmail.com</a>
+            </div>
+
+          </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="phone-portrait-outline"></ion-icon>
+            </div>
+
+          <div class="contact-info">
+              <a href="tel:+917020958323" class="contact-link">+91-7020958323</a>
+            </div>
+
+          </li>
+
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="location-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <!-- <p class="contact-title">Location</p> -->
+              <address>Bengaluru, IN</address>
+            </div>
+
+          </li>
+
+        </ul>
+
+        <div class="separator"></div>
+
+        <ul class="social-list">
+
+          <li class="social-item">
+            <a href="https://www.linkedin.com/in/kunalyelne/" class="social-link">
+              <ion-icon name="logo-linkedin" class="ion-2"></ion-icon>
+            </a>
+          </li>
+
+
+          <li class="social-item">
+            <a href="https://github.com/kunalyelne/" class="social-link">
+              <ion-icon name="logo-github" class="ion-2"></ion-icon>
+            </a>
+          </li>
+
+          <li class="social-item">
+            <a href="https://medium.com/@kunal_yelne/" class="social-link">
+              <ion-icon name="logo-medium" class="ion-2"></ion-icon>
+            </a>
+          </li>
+
+          <!-- Any link           -->
+          <li class="social-item">
+            <a href="https://x.com/kunal_yelne" class="social-link">
+              <ion-icon name="logo-twitter" class="ion-2"></ion-icon>
+            </a>
+          </li>
+
+        </ul>
+
+      </div>
+
+    </aside>
+
+
+
+
+
+    <!--
+      - #main-content
+    -->
+
+    <div class="main-content">
+
+      <!--
+        - #NAVBAR
+      -->
+
+      <nav class="navbar">
+
+        <ul class="navbar-list">
+
+          <li class="navbar-item">
+            <button class="navbar-link  active" data-nav-link>About</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Resume</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Projects</button>
+          </li>
+          <!-- <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Education</button>
+          </li> -->
+
+          <!-- <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Blog</button>
+          </li> -->
+
+          <!-- <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Contact</button>
+          </li> -->
+
+        </ul>
+
+      </nav>
+
+
+
+
+
+      <!--
+        - #ABOUT
+      -->
+
+      <article class="about  active" data-page="about">
+
+        <header>
+          <h2 class="h2 article-title">About me</h2>
+        </header>
+
+        <section class="about-text">
+          <p>
+            Hello! I am a versatile Software Engineer with expertise in Android and iOS app development. Proficient in Java, Swift, and React Native. Committed to delivering exceptional user experiences and maintaining high code quality.
+          </p>
+        </section>
+
+
+        <!--
+          - service
+        -->
+
+        <section class="service">
+
+          <h3 class="h3 service-title">What I Do?</h3>
+
+          <ul class="service-list">
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-dev.svg" alt="Web development icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Full Stack Mobile App Development</h4>
+
+                <p class="service-item-text">
+                  Building Responsive Android & iOS Applications.
+                </p>
+              </div>
+
+            </li>
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-design.svg
+                " alt="design icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Work -> Protein Feast -> Gym Conquer -> Snooze -> Repeat</h4>
+
+                <p class="service-item-text">
+                  Living life one rep at a time! 💪
+                </p>
+              </div>
+
+            </li>
+          </ul>
+
+          <div class="button-container">
+            <button class="form-btn" data-form-btn onclick="window.open('https://drive.google.com/file/d/15_sLcMuQGdxtsFM45SbrTKK1qlq-EnjT/view?usp=sharing', '_blank')">
+              <ion-icon name="document-text"></ion-icon>
+              <span >Download My Resume</span>
+            </button>
+          </div>
+
+        </section>
+
+
+        <!--
+          - testimonials
+        -->
+
+        <!-- <section class="testimonials">
+
+          <h3 class="h3 testimonials-title">Testimonials</h3>
+
+          <ul class="testimonials-list has-scrollbar">
+
+            <li class="testimonials-item">
+              <div class="content-card" data-testimonials-item>
+
+                <figure class="testimonials-avatar-box">
+                  <img src="./assets/images/avatar-1.png" alt="Daniel lewis" width="60" data-testimonials-avatar>
+                </figure>
+
+                <h4 class="h4 testimonials-item-title" data-testimonials-title>Dr.John Doe</h4>
+                <h5 class="h5 testimonials-item-sub-title" data-testimonials-title>Professor</h5>
+
+                <div class="testimonials-text" data-testimonials-text>
+                  <p>John is a dedicated professional with excellent skills in software development and teaching.
+                  </p>
+                </div>
+              </div>
+            </li>
+
+            <li class="testimonials-item">
+              <div class="content-card" data-testimonials-item>
+
+                <figure class="testimonials-avatar-box">
+                  <img src="./assets/images/avatar-2.png" alt="Jessica miller" width="60" data-testimonials-avatar>
+                </figure>
+
+                <h4 class="h4 testimonials-item-title" data-testimonials-title>Ms. S</h4>
+                <h5 class="h5 testimonials-item-sub-title" data-testimonials-title>Senior SE</h5>
+
+                <div class="testimonials-text" data-testimonials-text>
+                  <p>
+                    She has exceptional team work skills. She is very good at research and development and never afraid
+                    of trying new technology.
+                  </p>
+                </div>
+
+              </div>
+            </li>
+
+            <li class="testimonials-item">
+              <div class="content-card" data-testimonials-item>
+
+                <figure class="testimonials-avatar-box">
+                  <img src="./assets/images/avatar-1.png" alt="Daniel lewis" width="60" data-testimonials-avatar>
+                </figure>
+
+                <h4 class="h4 testimonials-item-title" data-testimonials-title>John Doe</h4>
+                <h5 class="h5 testimonials-item-sub-title" data-testimonials-title>Lead Developer, Tech Lead</h5>
+
+                <div class="testimonials-text" data-testimonials-text>
+                  <p>
+                    She not only has a sound knowledge of this field but also possesses the essential qualities of a
+                    great professional.
+                  </p>
+                </div>
+
+              </div>
+            </li>
+
+            <li class="testimonials-item">
+              <div class="content-card" data-testimonials-item>
+
+                <figure class="testimonials-avatar-box">
+                  <img src="./assets/images/avatar-4.png" alt="Henry william" width="60" data-testimonials-avatar>
+                </figure>
+
+                <h4 class="h4 testimonials-item-title" data-testimonials-title>Mr. K</h4>
+                <h5 class="h5 testimonials-item-sub-title" data-testimonials-title>Software Engineer</h5>
+
+                <div class="testimonials-text" data-testimonials-text>
+                  <p>
+                    I highly recommend Sanduni Perera for her exceptional skills in software development and AI
+                    related tasks. She is focused. Her communication skills were very helpful in the team to work
+                    collaboratively and professionally.
+                   </p>
+                </div>
+
+              </div>
+            </li>
+
+          </ul>
+
+        </section> -->
+
+
+        <!--
+          - testimonials modal
+        -->
+
+        <div class="modal-container" data-modal-container>
+
+          <div class="overlay" data-overlay></div>
+
+          <section class="testimonials-modal">
+
+            <button class="modal-close-btn" data-modal-close-btn>
+              <ion-icon name="close-outline"></ion-icon>
+            </button>
+
+            <div class="modal-img-wrapper">
+              <figure class="modal-avatar-box">
+                <img src="./assets/images/avatar-1.png" alt="Daniel lewis" width="80" data-modal-img>
+              </figure>
+
+              <img src="./assets/images/icon-quote.svg" alt="quote icon">
+            </div>
+
+            <div class="modal-content">
+
+              <h4 class="h3 modal-title" data-modal-title>Dr.John Doe</h4>
+
+              <time datetime="2021-06-14">25 September, 2023</time>
+
+              <div data-modal-text>
+                                  <p>John is a dedicated professional with excellent skills in software development and teaching.</p>
+              </div>
+
+            </div>
+
+          </section>
+
+        </div>
+        <!--
+        - #CONTACT
+      -->
+
+        <!-- <header>
+          <h2 class="h2 article-title">Contact</h2>
+        </header>
+
+        <section class="mapbox" data-mapbox>
+          <figure>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d497698.7766784237!2d77.30059752407487!3d12.954458655856433!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1670c9b44e6d%3A0xf8dfc3e8517e4fe0!2sBengaluru%2C%20Karnataka!5e0!3m2!1sen!2sin!4v1722795121625!5m2!1sen!2sin"
+              width="200" height="250" style="border:0;" allowfullscreen="" loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </figure>
+        </section> -->
+
+        <!-- <section class="contact-form">
+
+          <h3 class="h3 form-title">Contact Me</h3>
+
+          <ul class="social-list" style="position: left;">
+
+            <li class="social-item">
+              <a href="https://www.linkedin.com/in/kunalyelne/" class="social-link">
+                <ion-icon name="logo-linkedin"></ion-icon>
+              </a>
+
+            </li>
+            <li class="social-item">
+              <a href="mailto:kunal.s.yelne@gmail.com" class="contact-link">
+                <ion-icon name="mail"></ion-icon></a>
+            </li>
+          </ul> -->
+
+          <!-- <form action="#" class="form" data-form>
+
+            <div class="input-wrapper">
+              <input type="text" name="fullname" class="form-input" placeholder="Full name" required data-form-input>
+
+              <input type="email" name="email" class="form-input" placeholder="Email address" required data-form-input>
+            </div>
+
+            <textarea name="message" class="form-input" placeholder="Your Message" required data-form-input></textarea>
+
+            
+
+          </form> -->
+
+        <!-- </section> -->
+
+        <!-- <div class="button-container">
+          <button class="form-btn" data-form-btn onclick="window.open('https://drive.google.com/file/d/15_sLcMuQGdxtsFM45SbrTKK1qlq-EnjT/view?usp=sharing', '_blank')">
+            <ion-icon name="document-text"></ion-icon>
+            <span >See My Resume</span>
+          </button>
+        </div> -->
+
+      </article>
+
+
+
+
+
+      <!--
+        - #RESUME
+      -->
+
+      <article class="resume" data-page="resume">
+
+        <header>
+          <h2 class="h2 article-title">Resume</h2>
+        </header>
+
+        <section class="timeline">
+
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="book-outline"></ion-icon>
+            </div>
+
+            <h3 class="h3">Education</h3>
+          </div>
+
+          <ol class="timeline-list">
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Indian Institute of Information Technology Nagpur
+              </h4>
+
+              <span>2016 — 2020</span>
+
+              <p class="timeline-text">
+                Majored in Computer Science and Engineering • Graduated with 8.08 GPA
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Hislop Junior College</h4>
+
+              <span>2014 — 2016</span>
+
+              <p class="timeline-text">
+                HSC - 83% </p>
+
+            </li>
+
+          </ol>
+
+        </section>
+
+        <section class="timeline">
+
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="book-outline"></ion-icon>
+            </div>
+
+            <h3 class="h3">Experience</h3>
+          </div>
+
+          <ol class="timeline-list">
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Senior Software Engineer</h4>
+              <h5 class="h5 timeline-item-title">Esper</h5>
+
+              <span>September, 2021 — Present</span>
+
+              <p class="timeline-text">
+                <ul>
+                  <li class="timeline-text">
+                    • Contributed to the development of an industry-first <b>DevOps</b> feature, Blueprints, enabling efficient compliance management across large-scale dedicated device fleets for a leading <b>Mobile Device Management (MDM)</b> company.
+                  </li>
+                  <li class="timeline-text">
+                    • Engineered and deployed a <b>Device Policy Controller (DPC)</b> app, utilizing Google’s Android Device Policy Manager APIs, managing over <b>1 million+</b> devices across various OEMs.
+                  </li>
+                  <li class="timeline-text">
+                    • Contributed to the development of <b>Esper iOS agent</b>, leveraging Apple’s Mobile Device Management (MDM) protocols, improving cross-platform device management.
+                  </li>
+                  <li class="timeline-text">
+                    • Implemented <b>clean architecture</b> in applications,enhancing code readability and maintainability.
+                  </li>
+                  <li class="timeline-text">
+                    • Dramatically increased <b>unit-test case coverage from 40% to 95%</b>, significantly boosting code reliability. Achieved <b>100% integration test coverage</b> using Robotium, ensuring robust system functionality.
+                  </li>
+                  <li class="timeline-text">
+                    • Collaborated effectively with quality engineers, product management, design, and support teams, ensuring high-quality standards in all development phases.
+                  </li>
+                </ul>
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Software Developement Engineer</h4>
+              <h5 class="h5 timeline-item-title">Vyapar</h5>
+
+              <span>July, 2021 — September, 2021</span>
+
+              <p class="timeline-text">
+                <ul>
+                  <li class="timeline-text">
+                    • Developed and maintained the Vyapar app, a business <b>accounting software</b> with over <b>10M+ downloads</b>, optimizing <b>invoicing, inventory management, and accounting</b> for Indian small businesses.
+                  </li>
+                  <li class="timeline-text">
+                    • Integrated advanced <b>business analytics</b>, providing users with insightful reports to enhance business performance.
+                  </li>
+                </ul>
+              </p>
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Android Developer</h4>
+              <h5 class="h5 timeline-item-title">Collegedunia Web Private Limited</h5>
+
+              <span>July, 2020 — July, 2021</span>
+
+              <p class="timeline-text">
+                <ul>
+                  <li class="timeline-text">
+                    • Implementeda News feature using a self-developed Android Library/Artifact with <b>Kotlin and Android Architecture Components</b>, published via <b>Gitlab Package Registry. (FRIZZA, 5M+ downloads)</b>
+                  </li>
+                  <li class="timeline-text">
+                    • Led the development of <b>Raise Ticket</b> functionality and a complete <b>UI redesign using React Native</b>, improving user experience and app stability. <b>(Kickcash, 10K+ downloads)</b>
+                  </li>
+                </ul>
+              </p>
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Software Developement Intern</h4>
+              <h5 class="h5 timeline-item-title">NPCIL, DAE, Govt. of India</h5>
+
+              <span>May, 2019 — December, 2019</span>
+
+              <p class="timeline-text">
+                <ul>
+                  <li class="timeline-text">
+                    • Developed an interface between two web applications using <b>RESTful APIs</b>, ensuring synchronized data updates and improved workflow efficiency.
+                  </li>
+                  <li class="timeline-text">
+                    • Created a drag-and-drop tool with the <b>QT framework</b> for designing status trees in the organization’s safety system, enabling real-time reactor status monitoring.
+                  </li>
+                </ul>
+              </p>
+            </li>
+          </ol>
+
+        </section>
+
+        <section class="skill">
+
+          <h3 class="h3 skills-title">My skills</h3>
+          <div class="row">
+            <div class="column">
+
+              <ul class="skills-list content-card">
+
+                <li class="skills-item">
+
+                  <div class="title-wrapper">
+                    <h4 class="h4"> Languages </h4>
+                  </div>
+
+                  <div class="title-wrapper">
+                    <h5 class="h5"> Java, Kotlin, Swift, TypeScript, C++, C </h5>
+                  </div>
+
+                  <!-- <div class="skill-progress-bg">
+                    <div class="skill-progress-fill" style="width: 90%;"></div>
+                  </div> -->
+
+                </li>
+
+                <li class="skills-item">
+
+                  <div class="title-wrapper">
+                    <h4 class="h4"> App development </h4>
+                  </div>
+
+                  <div class="title-wrapper">
+                    <h5 class="h5"> Jetpack Compose, SwiftUI, ReactNative, MVVM/MVC Architecture, DaggerHilt, Swinject, Coroutines, RxJava, Combine, MQTT, WebSockets </h5>
+                  </div>
+
+                </li>
+
+                <li class="skills-item">
+
+                  <div class="title-wrapper">
+                    <h4 class="h4"> APIs, Tools and Database Integration </h4>
+                  </div>
+
+                  <div class="title-wrapper">
+                    <h5 class="h5"> REST, Firebase, APNs, Git, CI/CD, JIRA, MySQL, MongoDB, Postgresql </h5>
+                  </div>
+
+                </li>
+
+                <li class="skills-item">
+
+                  <div class="title-wrapper">
+                    <h4 class="h4"> Testing Framework </h4>
+                  </div>
+
+                  <div class="title-wrapper">
+                    <h5 class="h5"> Mockk, JUnit, XCTest, Jest </h5>
+                  </div>
+
+                </li>
+              </ul>
+            </div>
+
+            <div class="column">
+              <ul class="skills-list content-card">
+
+                <li class="skills-item">
+
+                  <div class="title-wrapper">
+                    <h4 class="h4"> Machine Learning/Computer Vision </h4>
+                  </div>
+
+                  <div class="title-wrapper">
+                    <h5 class="h5"> NumPy, Pandas, OpenCV, scikit-learn, TensorFlow, Pytorch </h5>
+                  </div>
+
+                </li>
+
+                <li class="skills-item">
+
+                  <div class="title-wrapper">
+                    <h4 class="h4"> Design & Collaboration </h4>
+                  </div>
+
+                  <div class="title-wrapper">
+                    <h5 class="h5"> Figma, Sketch, Jira </h5>
+                  </div>
+
+                </li>
+              </ul>
+            </div>
+          </div>
+
+
+        </section>
+
+      </article>
+
+
+
+
+
+      <!--
+        - #development
+      -->
+
+      <article class="development" data-page="projects">
+
+        <header>
+          <h2 class="h2 article-title">Projects</h2>
+        </header>
+
+        <section class="projects">
+
+          <ul class="filter-list">
+
+            <li class="filter-item">
+              <button class="active" data-filter-btn>All</button>
+            </li>
+            <li class="filter-item">
+              <button data-filter-btn>Android</button>
+            </li>
+            <li class="filter-item">
+              <button data-filter-btn>iOS</button>
+            </li>
+
+
+
+          </ul>
+
+          <div class="filter-select-box">
+
+            <button class="filter-select" style="background: white; color: black;" data-select>
+
+              <div class="select-value" data-selecct-value style="background: white; color: black;">Select Platform</div>
+
+              <div class="select-icon">
+                <ion-icon name="chevron-down"></ion-icon>
+              </div>
+              
+
+            </button>
+
+            <ul class="select-list" style="background: white; color: black;">
+
+              <li class="select-item">
+                <button data-select-item style="background: white; color: black;">All</button>
+              </li>
+
+
+              <li class="select-item">
+                <button style="background: white; color: black;" data-select-item>Android</button>
+              </li>
+
+              <li class="select-item">
+                <button style="background: white; color: black;" data-select-item>iOS</button>
+              </li>
+
+            </ul>
+
+          </div>
+
+          <ul class="project-list">
+
+            <!-- <li class="project-item  active" data-filter-item data-category="android">
+              <a href="https://github.com/kunalyelne/Movie-App">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/currency-converter-android.png " alt="smartsl" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Movies App - MVVM</h3>
+
+                <p class="project-category">Android</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="android">
+              <a href="https://github.com/kunalyelne/Weather-App-Kotlin">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/weather-app.png" alt="weather-app" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Weather App</h3>
+
+                <p class="project-category">Android</p>
+
+              </a>
+            </li> -->
+
+            <li class="project-item  active" data-filter-item data-category="ios">
+              <a href="https://github.com/kunalyelne/Scrumdinger-iOS-App">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/scrumdinger.png" alt="scrumdinger" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Scrumdiner App</h3>
+
+                <p class="project-category">iOS</p>
+
+              </a>
+            </li>
+          
+            <li class="project-item  active" data-filter-item data-category="ios">
+              <a href="https://github.com/kunalyelne/Currency-Converter-MVVM---iOS">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/currency-converter-ios.png" alt="currency-converter-ios" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Currency Converter - MVVM - iOS</h3>
+
+                <p class="project-category">iOS</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="ios">
+              <a href="https://github.com/kunalyelne/we-split">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/we-split.png" alt="we-split" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">We Split</h3>
+
+                <p class="project-category">iOS</p>
+
+              </a>
+            </li>
+          </ul>
+
+        </section>
+
+      </article>
+
+      <!--
+        - #RESEARCH
+      -->
+
+      <article class="research" data-page="education">
+
+        <header>
+          <h2 class="h2 article-title"> Education</h2>
+        </header>
+
+        <section class="research-posts">
+
+          <ul class="research-posts-list">
+
+            <li class="research-post-item">
+              <a href="https://www.iiitn.ac.in/">
+
+                <figure class="research-banner-box">
+                  <img src="./assets/images/iiitn.png" alt="IITN" loading="lazy">
+                </figure>
+
+                <div class="research-content">
+
+                  <div class="research-meta">
+                    <p class="research-category">B.Tech, CSE 🎓
+                    </p>
+
+                    <span class="dot"></span>
+
+                    <time datetime="2020-07-01">GPA - 8.08</time>
+                  </div>
+                  <h3 class="h3 research-item-title">Indian Institute of Information Technology Nagpur
+                  </h3>
+                  <p class="research-text">
+                    
+                  </p>
+                </div>
+
+              </a>
+            </li>
+          </ul>
+
+        </section>
+
+      </article>
+
+      <!--
+        - #BLOG
+      -->
+
+      <article class="blog" data-page="blog">
+
+        <header>
+          <h2 class="h2 article-title">Articles</h2>
+        </header>
+
+        <section class="research-posts">
+
+          <ul class="research-posts-list">
+
+            <li class="research-post-item">
+              <a
+                href="https://medium.com/@shashipraba.56/unlocking-sustainable-futures-the-finnish-technological-revolution-58dfb672f364">
+
+                <figure class="research-banner-box">
+                  <img src="./assets/images/sus.jpg" alt="FIN Sus" loading="lazy">
+                </figure>
+
+                <div class="research-content">
+
+                  <div class="research-meta">
+                    <p class="research-category">Sustainability</p>
+
+                    <span class="dot"></span>
+
+                    <time datetime="2022-02-23">Feb 11, 2024</time>
+                  </div>
+
+                  <h3 class="h3 research-item-title">Unlocking Sustainable Future</h3>
+
+                  <p class="research-text">
+                    In the global pursuit of sustainability, Finnish technology
+                    companies stand at the forefront, pioneering innovative practices, methods, and services geared
+                    towards a greener future.
+                  </p>
+
+                </div>
+
+              </a>
+            </li>
+
+            <li class="research-post-item">
+              <a
+                href="https://medium.com/@shashipraba.56/react-coding-interview-questions-answers-with-coding-challenges-45a3cd50433d">
+
+                <figure class="research-banner-box">
+                  <img src="./assets/images/react.png" alt="React" loading="lazy">
+                </figure>
+
+                <div class="research-content">
+
+                  <div class="research-meta">
+                    <p class="research-category">Programming</p>
+
+                    <span class="dot"></span>
+
+                    <time datetime="2022-02-23">Oct 22, 2023</time>
+                  </div>
+
+                  <h3 class="h3 research-item-title">React Coding Interview Questions & Answers with Coding Challenges
+                  </h3>
+
+                  <p class="research-text">
+                    A set of React Coding Interview Questions & Solutions for Coding Challenges with the code for your
+                    reference. </p>
+
+                </div>
+
+              </a>
+            </li>
+
+            <li class="research-post-item">
+              <a
+                href="https://medium.com/stackademic/enhancing-error-logging-in-typescript-applications-with-nest-js-error-filtering-0e17ee3d451b">
+
+                <figure class="research-banner-box">
+                  <img src="./assets/images/error.png" alt="error logging" loading="lazy">
+                </figure>
+
+                <div class="research-content">
+
+                  <div class="research-meta">
+                    <p class="research-category">Programming</p>
+
+                    <span class="dot"></span>
+
+                    <time datetime="2022-02-23">Feb 28, 2024</time>
+                  </div>
+
+                  <h3 class="h3 research-item-title">Enhancing Error Logging</h3>
+
+                  <p class="research-text">
+                    In TypeScript applications, proper error handling and logging are vital for maintaining application
+                    health and ensuring a seamless user experience. By leveraging Nest.js Error Filtering alongside a
+                    custom Logging Service,
+                    developers can enhance error logging capabilities, enabling better debugging, monitoring, and
+                    maintenance of their applications.</p>
+
+                </div>
+
+              </a>
+            </li>
+
+            <li>
+              <a href="https://medium.com/@shashipraba.56">
+
+                <button class="see-more-button">See More</button>
+
+
+              </a>
+            </li>
+
+          </ul>
+
+        </section>
+
+      </article>
+
+
+
+      <!--
+        - #TEACHING
+      -->
+
+      <article class="books" data-page="books">
+
+        <header>
+          <h2 class="h2 article-title">Books</h2>
+        </header>
+
+        <section class="research-posts">
+
+          <ul class="research-posts-list">
+
+            <li class="research-post-item">
+              <a href="https://www.amazon.co.uk/dp/B0CW1K2JTR">
+
+                <figure class="research-banner-box">
+                  <img src="./assets/images/book1.jpg" alt="Amazon Book 1" loading="lazy">
+                </figure>
+
+                <div class="research-content">
+
+                  <div class="research-meta">
+                    <p class="research-category">Enterprise Architecture</p>
+
+                    <span class="dot"></span>
+
+                    <time datetime="2022-02-23">Feb 24, 2024</time>
+                  </div>
+
+                  <h3 class="h3 research-item-title">Proposal for an Enterprise Software Architecture for Hirdaramani
+                    Group</h3>
+
+                  <p class="research-text">
+                    In this study, one of the enterprise architecture frameworks,
+                    the OGAF TOGAF ADM (The Open Group Architecture Framework), will be used to aid in the development
+                    of applications for the CPO industry.
+                  </p>
+
+                </div>
+
+              </a>
+            </li>
+
+            <li class="research-post-item">
+              <a href="https://www.amazon.co.uk/dp/B0CNY7WPS7">
+
+                <figure class="research-banner-box">
+                  <img src="./assets/images/book2.jpg" alt="CICD" loading="lazy">
+                </figure>
+
+                <div class="research-content">
+
+                  <div class="research-meta">
+                    <p class="research-category">CI/CD</p>
+
+                    <span class="dot"></span>
+
+                    <time datetime="2022-02-23">Nov 24, 2023</time>
+                  </div>
+
+                  <h3 class="h3 research-item-title">CI CD Pipeline with AWS Devops</h3>
+
+                  <p class="research-text">
+                    This book is intended to assist you in learning the methods,
+                    AWS DevOps tools, strategies, and areas of expertise required to manage DevOps projects successfully
+                  </p>
+
+                </div>
+
+              </a>
+            </li>
+          </ul>
+
+        </section>
+
+      </article>
+
+    </div>
+
+  </main>
+
+
+  <!--
+    - custom js link
+  -->
+  <script src="./assets/js/script.js"></script>
+
+  <!--
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>
