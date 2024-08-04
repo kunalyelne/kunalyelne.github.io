@@ -303,9 +303,9 @@
         u = "Kunal Yelne",
         I = "KunalYelne",
         b =
-          "A Versatile Software Engineer with training and experience in Java and Android programming. I take great care in the experience, architecture, and code quality of the things I build.",
+          "Versatile Software Engineer with extensive expertise in mobile app development across Android and iOS platforms. Proficient in Java, Swift, Android programming, iOS app development, and React Native. Committed to delivering exceptional user experiences, architecting robust solutions, and maintaining the highest standards of code quality.",
         M =
-          "https://drive.google.com/file/d/1ev6gTJMRS1vKSXBbtrAdaMjopfXRJGHB/view?usp=sharing",
+          "https://drive.google.com/file/d/15_sLcMuQGdxtsFM45SbrTKK1qlq-EnjT/view?usp=sharing",
         v = "https://github.com/kunalyelne",
         x = [
           {
@@ -342,16 +342,17 @@
         Z = {
           data: [
             {
-              title: "Full Stack Android Development",
+              title: "Full Stack Mobile App Development",
               fileName: "CloudInfraImg",
               skills: [
-                "\u26a1 Building Responsive Android Applications",
-                "\u26a1 Developing Mobile Apps Using Java, Kotlin and React Native",
+                "\u26a1 Building Responsive Android & iOS Applications",
+                "\u26a1 Developing Mobile Apps Using Java, Kotlin, Swift and React Native",
                 "\u26a1 Creating Backend Services in Spring Boot, Express, NodeJS",
               ],
               softwareSkills: [
                 { skillName: "Java", iconifyClass: "logos:java" },
                 { skillName: "Kotlin", iconifyClass: "logos:kotlin" },
+                { skillName: "Swift", iconifyClass: "logos:swift" },
                 { skillName: "React Native", iconifyClass: "logos:react" },
                 { skillName: "JavaScript", iconifyClass: "logos:javascript" },
                 { skillName: "Spring-Boot", iconifyClass: "logos:spring-icon" },
@@ -413,7 +414,7 @@
           title: "Contact Me",
           profile_image_path: "kunal.png",
           description:
-            "Get in touch, I can help you with DS, Android and in full project life-cycle from design to implementation to integration.",
+            "Get in touch, I can help you with DS, Android, iOS and in full project life-cycle from design to implementation to integration.",
         },
         O = {
           title: "Blogs",
