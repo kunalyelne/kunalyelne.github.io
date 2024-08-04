@@ -293,7 +293,7 @@
         y = {
           title: "Kunal's Portfolio",
           description:
-            "A Versatile Software Engineer with training and experience in Java and Android programming. I take great care in the experience, architecture, and code quality of the things I build.",
+            "Versatile Software Engineer with expertise in Android and iOS app development. Proficient in Java, Swift, and React Native. Committed to delivering exceptional user experiences and maintaining high code quality.",
           og: {
             title: "Kunal Yelne Portfolio",
             type: "website",
@@ -303,7 +303,7 @@
         u = "Kunal Yelne",
         I = "KunalYelne",
         b =
-          "Versatile Software Engineer with extensive expertise in mobile app development across Android and iOS platforms. Proficient in Java, Swift, Android programming, iOS app development, and React Native. Committed to delivering exceptional user experiences, architecting robust solutions, and maintaining the highest standards of code quality.",
+          "Versatile Software Engineer with expertise in Android and iOS app development. Proficient in Java, Swift, and React Native. Committed to delivering exceptional user experiences and maintaining high code quality.",
         M =
           "https://drive.google.com/file/d/15_sLcMuQGdxtsFM45SbrTKK1qlq-EnjT/view?usp=sharing",
         v = "https://github.com/kunalyelne",
