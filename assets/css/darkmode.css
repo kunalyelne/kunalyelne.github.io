@@ -1233,6 +1233,12 @@ textarea.form-input::-webkit-resizer { display: none; }
 
 .form-btn ion-icon { font-size: 16px; }
 
+.button-container {
+  text-align: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
 .form-btn:hover { background: var(--bg-gradient-yellow-1); }
 
 /* .form-btn:hover::before { background: var(--bg-gradient-yellow-2); } */
