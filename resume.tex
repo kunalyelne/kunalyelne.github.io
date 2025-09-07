@@ -1,0 +1,278 @@
+%-------------------------
+% Modern Resume in LaTeX
+% Author : Kunal Yelne  
+% Updated with business impact focus
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+% Modern font packages - choose one of these options
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+
+% FONT OPTIONS - Uncomment one of these for different looks:
+
+% Option 1: Source Sans Pro (Modern, clean sans-serif)
+% \usepackage[default]{sourcesanspro}
+
+% Option 2: Fira Sans (Clean, technical look)
+% \usepackage[sfdefault]{FiraSans}
+
+% Option 3: Roboto (Google's font, very modern)
+% \usepackage[sfdefault]{roboto}
+
+% Option 4: Lato (Professional, readable)
+% \usepackage[default]{lato}
+
+% Option 5: Open Sans (Popular web font)
+% \usepackage[default]{opensans}
+
+% For math and symbols compatibility
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{xcolor}
+\input{glyphtounicode}
+
+% Define modern colors
+\definecolor{primarycolor}{RGB}{0, 0, 0}        % Pure black for headings and name
+\definecolor{accentcolor}{RGB}{64, 64, 64}      % Rich dark gray for accents
+\definecolor{textcolor}{RGB}{32, 32, 32}        % Dark charcoal for body text
+
+% FontAwesome icons with proper parameter handling
+\usepackage{ifthen}
+\usepackage{textcomp}
+\IfFileExists{fontawesome5.sty}{%
+  \usepackage{fontawesome5}
+  \newcommand{\mobileicon}{{\color{primarycolor}\faMobile}}
+  \newcommand{\emailicon}{{\color{primarycolor}\faEnvelope}}
+  \newcommand{\githubicon}{{\color{primarycolor}\faGithub}}
+  \newcommand{\linkedinicon}{{\color{primarycolor}\faLinkedin}}
+}{%
+  % Fallback to marvosym package for basic icons
+  \usepackage{marvosym}
+  \newcommand{\mobileicon}{{\color{primarycolor}\Mobilefone}}
+  \newcommand{\emailicon}{{\color{primarycolor}\Letter}}
+  \newcommand{\githubicon}{{\color{primarycolor}\ComputerMouse}}
+  \newcommand{\linkedinicon}{{\color{primarycolor}\Info}}
+}
+
+% Simple contact commands without parameter conflicts
+\newcommand{\mobile}[1]{\mobileicon\ #1} 
+\newcommand{\email}[1]{\emailicon\ \href{mailto:#1}{\color{primarycolor}#1}} 
+\newcommand{\github}[1]{\githubicon\ \href{https://github.com/#1}{\color{primarycolor}#1}} 
+\newcommand{\linkedin}[1]{\linkedinicon\ \href{https://www.linkedin.com/in/#1}{\color{primarycolor}#1}}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins for modern look
+\addtolength{\oddsidemargin}{-0.6in}
+\addtolength{\evensidemargin}{-0.6in}
+\addtolength{\textwidth}{1.2in}
+\addtolength{\topmargin}{-.6in}
+\addtolength{\textheight}{1.2in}
+
+% Fix footer spacing
+\setlength{\footskip}{4.08003pt}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Modern sections formatting
+\titleformat{\section}{
+  \vspace{-8pt}\color{primarycolor}\bfseries\large\raggedright
+}{}{0em}{}[\color{primarycolor}\titlerule \vspace{-6pt}]
+
+% Ensure PDF is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands with modern styling
+\newcommand{\resumeItem}[1]{
+  \item\small\color{textcolor}{
+    {#1 \vspace{-1pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{\color{primarycolor}#1} & \color{accentcolor}\textbf{#2} \\
+      \textit{\color{textcolor}\small#3} & \textit{\color{accentcolor}\small #4} \\
+    \end{tabular*}\vspace{-6pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.98\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\color{textcolor}\small#1} & \textit{\color{accentcolor}\small #2} \\
+    \end{tabular*}\vspace{-6pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.98\textwidth}{l@{\extracolsep{\fill}}r}
+      \small\color{textcolor}#1 & \color{accentcolor}#2 \\
+    \end{tabular*}\vspace{-6pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-3pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0.2in]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-4pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    {\Huge\bfseries\color{primarycolor} KUNAL YELNE} \\[4pt]
+    {\large\color{accentcolor} Senior Software Engineer | Mobile \& Backend Systems} \\[8pt]
+    
+    \mobile{(+91) 7038499489} \hspace{8pt}$\bullet$\hspace{8pt} 
+    \email{kunal.s.yelne@gmail.com} \hspace{8pt}$\bullet$\hspace{8pt}
+    \linkedin{kunalyelne} \hspace{8pt}$\bullet$\hspace{8pt}
+    \github{kunalyelne}
+\end{center}
+
+%-----------PROFESSIONAL SUMMARY-----------
+\section{Professional Summary}
+\begin{itemize}[leftmargin=0.15in, label={}]
+   \small{\item\color{textcolor}{
+    Senior Software Engineer with \textbf{5.8+ years} building scalable mobile and backend systems using \textbf{Swift, Kotlin, Go, and cloud technologies}. Led initiatives serving \textbf{1M+ managed devices}, improved deployment pipelines by \textbf{over 90\%}, and increased test coverage from 40\% to 95\%. Experience mentoring junior engineers and collaborating across cross-functional teams in fast-paced environments.
+   }}
+\end{itemize}
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Esper}{Bengaluru, IN}
+      {Senior Software Engineer}{September 2021 -- Present}
+      \resumeItemListStart
+        \resumeItem{Architected industry-first DevOps feature \textbf{"Blueprints"} that reduced compliance management time by \textbf{80\%} for enterprise customers managing dedicated device fleets at scale.}
+        \resumeItem{Engineered Device Policy Controller handling \textbf{1M+ Android devices} across 50+ OEMs, achieving \textbf{99.9\% uptime} and reducing device provisioning failures by \textbf{65\%}.}
+        \resumeItem{Delivered cross-platform MDM solution supporting iOS devices, expanding market reach by \textbf{30\%} and enabling enterprise customers to manage mixed device ecosystems seamlessly.}
+        \resumeItem{Led quality improvement initiative increasing unit test coverage from \textbf{40\% to 95\%} and implementing comprehensive integration testing, resulting in \textbf{70\% reduction} in production incidents and improved system reliability.}
+        \resumeItem{Eliminated deployment-related incidents by implementing systematic testing protocols, saving \textbf{15+ hours/week} in debugging and significantly improving customer satisfaction scores.}
+        \resumeItem{Streamlined cross-functional collaboration processes, reducing feature delivery time by \textbf{25\%} through improved communication between engineering, QA, product, and support teams.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Butter Chicken Studios}{Remote}
+      {Founder \& Lead Engineer}{2025 -- Present}
+      \resumeItemListStart
+        \resumeItem{Built end-to-end fitness platform \textbf{Fitlane} from concept to production, designing scalable architecture that supports future growth to \textbf{100K+ users} with minimal infrastructure overhead.}
+        \resumeItem{Reduced infrastructure provisioning time from \textbf{weeks to hours} through Infrastructure as Code implementation, enabling rapid feature deployment and A/B testing capabilities.}
+        \resumeItem{Implemented containerized CI/CD pipelines reducing deployment time \textbf{from 2 hours to 5 minutes}, enabling rapid iteration cycles and improved developer productivity.}
+        \resumeItem{Implemented auto-scaling infrastructure that automatically handles traffic spikes up to \textbf{10x normal load}, ensuring zero downtime during peak usage periods.}
+        \resumeItem{Integrated AI-powered personalization engine that increased user engagement by \textbf{35\%} through customized fitness recommendations and automated content generation.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Vyapar}{Bengaluru, IN}
+      {Software Development Engineer}{July 2021 -- September 2021}
+      \resumeItemListStart
+        \resumeItem{Enhanced business accounting platform serving \textbf{10M+ Indian SMEs}, optimizing invoice processing workflows that reduced manual data entry time by \textbf{60\%} for small business owners.}
+        \resumeItem{Implemented advanced business analytics dashboard that helped \textbf{500K+ businesses} make data-driven decisions, resulting in improved cash flow management and inventory optimization.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Collegedunia Web Private Limited}{Gurugram, IN}
+      {Android Developer}{July 2020 -- July 2021}
+      \resumeItemListStart
+        \resumeItem{Engineered reusable news feature library that reduced development time by \textbf{40\%} across multiple apps, leading to faster feature delivery and consistent user experience for \textbf{5M+ users}.}
+        \resumeItem{Redesigned ticket management system and UI/UX that improved user satisfaction scores by \textbf{50\%} and reduced support response time by \textbf{35\%}, directly impacting customer retention.}
+        \resumeItem{Optimized app performance reducing crash rates by \textbf{60\%} and improving app store ratings from 3.2 to 4.1 stars, resulting in \textbf{25\% increase} in organic downloads.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {NPCIL, DAE, Govt. of India}{Mumbai, IN}
+      {Software Development Intern}{May 2019 -- Dec. 2019}
+      \resumeItemListStart
+        \resumeItem{Automated data synchronization between critical systems, eliminating \textbf{15+ hours/week} of manual data entry and reducing human errors in nuclear plant operations by \textbf{90\%}.}
+        \resumeItem{Developed real-time safety monitoring interface that improved reactor status visibility for operators, contributing to enhanced safety protocols and faster emergency response times.}
+        \resumeItem{Created intuitive drag-and-drop visualization tool that reduced operator training time by \textbf{30\%} while maintaining strict nuclear industry safety and reliability standards.}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Indian Institute of Information Technology Nagpur}{Nagpur, IN}
+      {B.Tech In Computer Science and Engineering, CGPA: 8.08}{July 2016 -- July 2020}
+  \resumeSubHeadingListEnd
+
+%-----------CORE EXPERTISE-----------
+\section{Core Technical Expertise}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item\color{textcolor}{
+     \textbf{\color{primarycolor}Mobile Application Architecture}{: Expertise in iOS/Android development using modern frameworks (SwiftUI, Jetpack Compose), MVVM patterns, and cross-platform solutions} \\[2pt]
+     \textbf{\color{primarycolor}Backend Systems \& APIs}{: Proficient in designing scalable microservices, RESTful APIs, database optimization, and distributed system patterns} \\[2pt]
+     \textbf{\color{primarycolor}Cloud Infrastructure \& DevOps}{: Hands-on experience with AWS/GCP services, containerization, Infrastructure as Code, and CI/CD pipeline automation} \\[2pt]
+     \textbf{\color{primarycolor}Quality Engineering}{: Strong advocate for test-driven development, automated testing strategies, code review processes, and production monitoring} \\[2pt]
+     \textbf{\color{primarycolor}Technical Leadership}{: Experience mentoring junior developers, driving technical decisions, and collaborating across cross-functional teams in agile environments}
+    }}
+ \end{itemize}
+
+%-----------TECHNICAL SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item\color{textcolor}{
+     \textbf{\color{primarycolor}Languages}{: Go, Swift, Kotlin, Java, Python, JavaScript/TypeScript, C++} \\[2pt]
+     \textbf{\color{primarycolor}Mobile Development}{: iOS (SwiftUI, UIKit, Combine), Android (Jetpack Compose, Architecture Components), React Native} \\[2pt]
+     \textbf{\color{primarycolor}Backend \& Databases}{: Node.js, PostgreSQL, Redis, RESTful APIs, GraphQL, Microservices Architecture} \\[2pt]
+     \textbf{\color{primarycolor}Cloud \& Infrastructure}{: AWS (Lambda, RDS, S3, ECS), GCP, Docker, Kubernetes, Terraform, CI/CD Pipelines} \\[2pt]
+     \textbf{\color{primarycolor}Tools \& Practices}{: Git, GitHub Actions, Infrastructure as Code, Test-Driven Development, Agile/Scrum}
+    }}
+ \end{itemize}
+
+%-----------KEY PROJECTS-----------
+\section{Selected Project Highlights}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item\color{textcolor}{
+     \textbf{\color{primarycolor}Enterprise MDM Platform}: Co-architected device management system handling \textbf{1M+ Android/iOS devices} across multiple OEMs. Contributed to features that reduced customer onboarding time and improved enterprise adoption. \\[3pt]
+     \textbf{\color{primarycolor}Fitlane Fitness Platform}: End-to-end development of mobile app and backend services using modern architecture (SwiftUI, Go microservices, PostgreSQL). Implemented Infrastructure as Code and automated deployment pipelines. \\[3pt]
+     \textbf{\color{primarycolor}Quality Engineering Initiative}: Led testing strategy improvements across multiple codebases, establishing automated testing frameworks and monitoring systems that significantly reduced production issues.
+    }}
+ \end{itemize}
+
+ %-----------RECOGNITION-----------
+\section{Professional Recognition}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item\color{textcolor}{
+     {Selected for \textbf{\color{primarycolor}ACM ICPC} Amritapuri Regional 2018, demonstrating competitive programming excellence and algorithmic problem-solving capabilities.} \\[2pt]
+     {Won \textbf{\color{primarycolor}1st place} at Esper Spark Hackathon for innovative Mobile Device Management solution that directly contributed to product roadmap and customer value delivery.}
+    }}
+ \end{itemize}
+
+%-------------------------------------------
+\end{document}

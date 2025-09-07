@@ -150,10 +150,7 @@ ion-icon {
   color: white;
 }
 
-::selection {
-  background: var(--orange-yellow-crayola);
-  color: var(--smoky-black);
-}
+/* Using default browser selection colors for natural experience */
 
 :focus { outline-color: var(--orange-yellow-crayola); }
 
@@ -1870,6 +1867,11 @@ textarea.form-input::-webkit-resizer { display: none; }
   }
 
   .info-content .title { margin: auto; }
+  
+  .info-content .subtitle { 
+    text-align: center; 
+    margin: auto; 
+  }
 
   .info_more-btn { display: none; }
 

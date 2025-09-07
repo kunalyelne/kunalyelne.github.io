@@ -15,28 +15,29 @@
   <!--
     - custom css links
   -->
-  <!-- <link id="theme-link rel="stylesheet" href="./assets/css/darkmode.css" id="dark-mode"> -->
-  <link id="theme-link" rel="stylesheet" href="./assets/css/lightmode.css" id="light-mode">
+  <link id="theme-link" rel="stylesheet" href="./assets/css/darkmode.css" id="dark-mode">
+  <!-- <link id="theme-link rel="stylesheet" href="./assets/css/lightmode.css" id="light-mode"> -->
+  <link rel="stylesheet" href="./assets/css/enhancements.css">
 
   <!--
     - google font link
   -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
   <!-- Add Font Awesome CDN link -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
 </head>
 
-<body>
+<body data-theme="dark">
 
   <!--
     - #MAIN
   -->
   <button id="mode-toggle" class="mode-toggle">
-    <i id="mode-icon" class="fas fa-sun"></i> <!-- Initial icon for light mode -->
+    <i id="mode-icon" class="fas fa-moon" style="color: #fff;"></i> <!-- Initial icon for dark mode -->
   </button>
 
   <main>
@@ -50,13 +51,14 @@
       <div class="sidebar-info">
 
         <figure class="avatar-box">
-          <img src="./assets/images/profile-avatar.png" alt="Your Name" width="90">
+          <img src="./assets/images/profile-avatar.jpg" alt="Your Name" width="90">
         </figure>
 
         <div class="info-content">
-          <h1 class="name" title="Your Name">Kunal Yelne</h1>
+          <h1 class="name" title="Kunal Yelne">Kunal Yelne</h1>
 
-          <p class="title"> Software Engineer </p>
+          <p class="title">Senior Software Engineer & Tech Lead</p>
+          <p class="subtitle">Mobile & Backend Systems Architecture</p>
         </div>
 
         <button style="background: white; color: black;" class="info_more-btn" data-sidebar-btn>
@@ -196,10 +198,6 @@
 
       </nav>
 
-
-
-
-
       <!--
         - #ABOUT
       -->
@@ -211,8 +209,14 @@
         </header>
 
         <section class="about-text">
-          <p>
-            Hello! I am a versatile Software Engineer with expertise in Android and iOS app development. Proficient in Java, Swift, and React Native. Committed to delivering exceptional user experiences and maintaining high code quality.
+          <p class="fade-in-up">
+            <strong class="gradient-text">Senior Software Engineer & Technical Leader</strong> with <strong>5.8+ years</strong> of proven expertise architecting mobile and backend systems that serve <strong>millions of users worldwide</strong>. I specialize in building scalable enterprise solutions while leading cross-functional teams to deliver exceptional results.
+          </p>
+          <p class="fade-in-up" style="animation-delay: 0.2s;">
+            Currently driving critical initiatives at <strong>Esper</strong>, where I've architected industry-first DevOps features, managed <strong>1M+ devices</strong> across enterprise fleets, and led quality improvements that reduced production incidents by <strong>70%</strong>. As <strong>Founder & Lead Engineer</strong> at Butter Chicken Studios, I'm building the next-generation fitness platform with AI-powered personalization.
+          </p>
+          <p class="fade-in-up" style="animation-delay: 0.4s;">
+            I excel at transforming complex business requirements into scalable technical solutions, mentoring engineering teams, and driving innovation through modern architecture patterns. My approach combines deep technical expertise with strategic thinking to deliver products that create lasting impact.
           </p>
         </section>
 
@@ -226,33 +230,62 @@
           <h3 class="h3 service-title">What I Do?</h3>
 
           <ul class="service-list">
-            <li class="service-item">
+            <li class="service-item glass-card">
 
-              <div class="service-icon-box">
-                <img src="./assets/images/icon-dev.svg" alt="Web development icon" width="40">
+              <div class="service-icon-box floating">
+                <img src="./assets/images/icon-dev.svg" alt="Mobile development icon" width="40">
               </div>
 
               <div class="service-content-box">
-                <h4 class="h4 service-item-title">Full Stack Mobile App Development</h4>
+                <h4 class="h4 service-item-title gradient-text">Enterprise Architecture & Scale</h4>
 
                 <p class="service-item-text">
-                  Building Responsive Android & iOS Applications.
+                  Leading the design of systems that manage <strong>1M+ enterprise devices</strong> with 99.9% uptime. Architecting industry-first DevOps solutions that reduce compliance overhead by <strong>80%</strong> while maintaining security and reliability standards.
                 </p>
               </div>
 
             </li>
-            <li class="service-item">
+            <li class="service-item glass-card">
 
-              <div class="service-icon-box">
-                <img src="./assets/images/icon-design.svg
-                " alt="design icon" width="40">
+              <div class="service-icon-box floating">
+                <img src="./assets/images/icon-design.svg" alt="architecture icon" width="40">
               </div>
 
               <div class="service-content-box">
-                <h4 class="h4 service-item-title">Work -> Protein Feast -> Gym Conquer -> Snooze -> Repeat</h4>
+                <h4 class="h4 service-item-title gradient-text">Technical Leadership & Strategy</h4>
 
                 <p class="service-item-text">
-                  Living life one rep at a time! 💪
+                  Building and mentoring high-performing engineering teams, establishing quality standards that improved test coverage from <strong>40% to 95%</strong>, and driving technical decisions that reduce incidents by <strong>70%</strong>.
+                </p>
+              </div>
+
+            </li>
+            <li class="service-item glass-card">
+
+              <div class="service-icon-box floating">
+                <img src="./assets/images/icon-app.svg" alt="full-stack icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title gradient-text">End-to-End Product Development</h4>
+
+                <p class="service-item-text">
+                  From concept to production: Swift, Kotlin, Go microservices, Infrastructure as Code. Founded <strong>Butter Chicken Studios</strong>, building AI-powered fitness platform with auto-scaling architecture and <strong>35% engagement</strong> improvement.
+                </p>
+              </div>
+
+            </li>
+            <li class="service-item glass-card">
+
+              <div class="service-icon-box floating">
+                <img src="./assets/images/icon-photo.svg" alt="lifestyle icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title gradient-text">Innovation & Excellence</h4>
+
+                <p class="service-item-text">
+                  <strong>Award-winning hackathon solutions</strong> that drive product roadmaps. <strong>ACM ICPC</strong> competitor with proven problem-solving skills. Continuously exploring emerging technologies to deliver competitive advantages.
                 </p>
               </div>
 
@@ -260,111 +293,13 @@
           </ul>
 
           <div class="button-container">
-            <button class="form-btn" data-form-btn onclick="window.open('https://drive.google.com/file/d/15_sLcMuQGdxtsFM45SbrTKK1qlq-EnjT/view?usp=sharing', '_blank')">
+            <button class="form-btn" data-form-btn onclick="window.open('https://drive.google.com/file/d/1Mt2flG1fbkpeyfxTc9MZ_aePIkS8CcA4/view?usp=sharing', '_blank')">
               <ion-icon name="document-text"></ion-icon>
               <span >Download My Resume</span>
             </button>
           </div>
 
         </section>
-
-
-        <!--
-          - testimonials
-        -->
-
-        <!-- <section class="testimonials">
-
-          <h3 class="h3 testimonials-title">Testimonials</h3>
-
-          <ul class="testimonials-list has-scrollbar">
-
-            <li class="testimonials-item">
-              <div class="content-card" data-testimonials-item>
-
-                <figure class="testimonials-avatar-box">
-                  <img src="./assets/images/avatar-1.png" alt="Daniel lewis" width="60" data-testimonials-avatar>
-                </figure>
-
-                <h4 class="h4 testimonials-item-title" data-testimonials-title>Dr.John Doe</h4>
-                <h5 class="h5 testimonials-item-sub-title" data-testimonials-title>Professor</h5>
-
-                <div class="testimonials-text" data-testimonials-text>
-                  <p>John is a dedicated professional with excellent skills in software development and teaching.
-                  </p>
-                </div>
-              </div>
-            </li>
-
-            <li class="testimonials-item">
-              <div class="content-card" data-testimonials-item>
-
-                <figure class="testimonials-avatar-box">
-                  <img src="./assets/images/avatar-2.png" alt="Jessica miller" width="60" data-testimonials-avatar>
-                </figure>
-
-                <h4 class="h4 testimonials-item-title" data-testimonials-title>Ms. S</h4>
-                <h5 class="h5 testimonials-item-sub-title" data-testimonials-title>Senior SE</h5>
-
-                <div class="testimonials-text" data-testimonials-text>
-                  <p>
-                    She has exceptional team work skills. She is very good at research and development and never afraid
-                    of trying new technology.
-                  </p>
-                </div>
-
-              </div>
-            </li>
-
-            <li class="testimonials-item">
-              <div class="content-card" data-testimonials-item>
-
-                <figure class="testimonials-avatar-box">
-                  <img src="./assets/images/avatar-1.png" alt="Daniel lewis" width="60" data-testimonials-avatar>
-                </figure>
-
-                <h4 class="h4 testimonials-item-title" data-testimonials-title>John Doe</h4>
-                <h5 class="h5 testimonials-item-sub-title" data-testimonials-title>Lead Developer, Tech Lead</h5>
-
-                <div class="testimonials-text" data-testimonials-text>
-                  <p>
-                    She not only has a sound knowledge of this field but also possesses the essential qualities of a
-                    great professional.
-                  </p>
-                </div>
-
-              </div>
-            </li>
-
-            <li class="testimonials-item">
-              <div class="content-card" data-testimonials-item>
-
-                <figure class="testimonials-avatar-box">
-                  <img src="./assets/images/avatar-4.png" alt="Henry william" width="60" data-testimonials-avatar>
-                </figure>
-
-                <h4 class="h4 testimonials-item-title" data-testimonials-title>Mr. K</h4>
-                <h5 class="h5 testimonials-item-sub-title" data-testimonials-title>Software Engineer</h5>
-
-                <div class="testimonials-text" data-testimonials-text>
-                  <p>
-                    I highly recommend Sanduni Perera for her exceptional skills in software development and AI
-                    related tasks. She is focused. Her communication skills were very helpful in the team to work
-                    collaboratively and professionally.
-                   </p>
-                </div>
-
-              </div>
-            </li>
-
-          </ul>
-
-        </section> -->
-
-
-        <!--
-          - testimonials modal
-        -->
 
         <div class="modal-container" data-modal-container>
 
@@ -399,69 +334,7 @@
           </section>
 
         </div>
-        <!--
-        - #CONTACT
-      -->
-
-        <!-- <header>
-          <h2 class="h2 article-title">Contact</h2>
-        </header>
-
-        <section class="mapbox" data-mapbox>
-          <figure>
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d497698.7766784237!2d77.30059752407487!3d12.954458655856433!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1670c9b44e6d%3A0xf8dfc3e8517e4fe0!2sBengaluru%2C%20Karnataka!5e0!3m2!1sen!2sin!4v1722795121625!5m2!1sen!2sin"
-              width="200" height="250" style="border:0;" allowfullscreen="" loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"></iframe>
-          </figure>
-        </section> -->
-
-        <!-- <section class="contact-form">
-
-          <h3 class="h3 form-title">Contact Me</h3>
-
-          <ul class="social-list" style="position: left;">
-
-            <li class="social-item">
-              <a href="https://www.linkedin.com/in/kunalyelne/" class="social-link">
-                <ion-icon name="logo-linkedin"></ion-icon>
-              </a>
-
-            </li>
-            <li class="social-item">
-              <a href="mailto:kunal.s.yelne@gmail.com" class="contact-link">
-                <ion-icon name="mail"></ion-icon></a>
-            </li>
-          </ul> -->
-
-          <!-- <form action="#" class="form" data-form>
-
-            <div class="input-wrapper">
-              <input type="text" name="fullname" class="form-input" placeholder="Full name" required data-form-input>
-
-              <input type="email" name="email" class="form-input" placeholder="Email address" required data-form-input>
-            </div>
-
-            <textarea name="message" class="form-input" placeholder="Your Message" required data-form-input></textarea>
-
-            
-
-          </form> -->
-
-        <!-- </section> -->
-
-        <!-- <div class="button-container">
-          <button class="form-btn" data-form-btn onclick="window.open('https://drive.google.com/file/d/15_sLcMuQGdxtsFM45SbrTKK1qlq-EnjT/view?usp=sharing', '_blank')">
-            <ion-icon name="document-text"></ion-icon>
-            <span >See My Resume</span>
-          </button>
-        </div> -->
-
       </article>
-
-
-
-
 
       <!--
         - #RESUME
@@ -477,7 +350,112 @@
 
           <div class="title-wrapper">
             <div class="icon-box">
-              <ion-icon name="book-outline"></ion-icon>
+              <ion-icon name="briefcase-outline"></ion-icon>
+            </div>
+
+            <h3 class="h3">Experience</h3>
+          </div>
+
+          <ol class="timeline-list">
+
+            <!-- Founder & Lead Engineer -->
+            <li class="timeline-item case-study-card">
+              <h4 class="h4 timeline-item-title case-study-title">Founder & Lead Engineer</h4>
+              <h6 class="h6 timeline-item-title case-study-subtitle">Butter Chicken Studios - Fitlane</h6>
+              <span>2025 — Present</span>
+
+              <p class="timeline-text">
+                <strong>Building the next-generation fitness platform with AI-powered personalization</strong>
+              </p>
+
+              <div class="impact-metrics">
+                <span class="impact-metric">100K+ User Scalability</span>
+                <span class="impact-metric">35% Engagement Boost</span>
+                <span class="impact-metric">5min Deployment</span>
+                <span class="impact-metric">10x Auto-scaling</span>
+              </div>
+
+              <ul class="timeline-text">
+                <li>• Architected end-to-end fitness platform from concept to production with scalable infrastructure supporting future growth to <strong>100K+ users</strong></li>
+                <li>• Implemented Infrastructure as Code reducing provisioning time from <strong>weeks to hours</strong>, enabling rapid A/B testing capabilities</li>
+                <li>• Built containerized CI/CD pipelines cutting deployment time from <strong>2 hours to 5 minutes</strong></li>
+                <li>• Integrated AI-powered personalization engine increasing user engagement by <strong>35%</strong> through customized recommendations</li>
+              </ul>
+            </li>
+
+            <!-- Senior Software Engineer at Esper -->
+            <li class="timeline-item case-study-card">
+              <h4 class="h4 timeline-item-title case-study-title">Senior Software Engineer</h4>
+              <h6 class="h6 timeline-item-title case-study-subtitle">Esper - Mobile Device Management Leader</h6>
+              <span>September, 2021 — Present</span>
+
+              <p class="timeline-text">
+                <strong>Leading critical initiatives for enterprise device management at scale</strong>
+              </p>
+
+              <div class="impact-metrics">
+                <span class="impact-metric">1M+ Devices</span>
+                <span class="impact-metric">80% Compliance Reduction</span>
+                <span class="impact-metric">70% Fewer Incidents</span>
+                <span class="impact-metric">95% Test Coverage</span>
+                <span class="impact-metric">99.9% Uptime</span>
+              </div>
+
+              <ul class="timeline-text">
+                <li>• <strong>Architected industry-first DevOps feature "Blueprints"</strong> reducing compliance management time by <strong>80%</strong> for enterprise customers</li>
+                <li>• <strong>Engineered Device Policy Controller</strong> handling <strong>1M+ Android devices</strong> across 50+ OEMs with <strong>99.9% uptime</strong></li>
+                <li>• <strong>Led cross-platform expansion</strong> to iOS, expanding market reach by <strong>30%</strong> and enabling mixed device ecosystem management</li>
+                <li>• <strong>Drove quality transformation</strong> increasing test coverage from <strong>40% to 95%</strong>, resulting in <strong>70% reduction</strong> in production incidents</li>
+                <li>• <strong>Established systematic testing protocols</strong> saving <strong>15+ hours/week</strong> in debugging and improving customer satisfaction</li>
+              </ul>
+            </li>
+
+            <!-- Software Development Engineer at Vyapar -->
+            <li class="timeline-item case-study-card">
+              <h4 class="h4 timeline-item-title case-study-title">Software Development Engineer</h4>
+              <h6 class="h6 timeline-item-title case-study-subtitle">Vyapar - Leading SME Accounting Platform</h6>
+              <span>July, 2021 — September, 2021</span>
+
+              <div class="impact-metrics">
+                <span class="impact-metric">10M+ Downloads</span>
+                <span class="impact-metric">500K+ Businesses</span>
+                <span class="impact-metric">60% Efficiency Gain</span>
+              </div>
+
+              <ul class="timeline-text">
+                <li>• <strong>Enhanced business accounting platform</strong> serving <strong>10M+ Indian SMEs</strong>, optimizing invoice workflows reducing manual entry by <strong>60%</strong></li>
+                <li>• <strong>Implemented advanced analytics dashboard</strong> helping <strong>500K+ businesses</strong> make data-driven decisions for cash flow and inventory management</li>
+              </ul>
+            </li>
+
+            <!-- Android Developer at Collegedunia -->
+            <li class="timeline-item case-study-card">
+              <h4 class="h4 timeline-item-title case-study-title">Android Developer</h4>
+              <h6 class="h6 timeline-item-title case-study-subtitle">Collegedunia Web Private Limited</h6>
+              <span>July, 2020 — July, 2021</span>
+
+              <div class="impact-metrics">
+                <span class="impact-metric">5M+ Users</span>
+                <span class="impact-metric">40% Dev Time Saved</span>
+                <span class="impact-metric">4.1★ Rating</span>
+                <span class="impact-metric">25% Download Boost</span>
+              </div>
+
+              <ul class="timeline-text">
+                <li>• <strong>Engineered reusable news library</strong> reducing development time by <strong>40%</strong> across multiple apps, impacting <strong>5M+ users</strong></li>
+                <li>• <strong>Led complete UI/UX redesign</strong> improving satisfaction scores by <strong>50%</strong> and reducing support response time by <strong>35%</strong></li>
+                <li>• <strong>Optimized performance</strong> reducing crash rates by <strong>60%</strong>, improving ratings from 3.2 to <strong>4.1 stars</strong> and increasing organic downloads by <strong>25%</strong></li>
+              </ul>
+            </li>
+          </ol>
+
+        </section>
+
+        <section class="timeline">
+
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="school-outline"></ion-icon>
             </div>
 
             <h3 class="h3">Education</h3>
@@ -498,215 +476,113 @@
 
             </li>
 
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Hislop Junior College</h4>
-
-              <span>2014 — 2016</span>
-
-              <p class="timeline-text">
-                HSC - 83% </p>
-
-            </li>
-
-          </ol>
-
-        </section>
-
-        <section class="timeline">
-
-          <div class="title-wrapper">
-            <div class="icon-box">
-              <ion-icon name="book-outline"></ion-icon>
-            </div>
-
-            <h3 class="h3">Experience</h3>
-          </div>
-
-          <ol class="timeline-list">
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Senior Software Engineer</h4>
-              <h5 class="h5 timeline-item-title">Esper</h5>
-
-              <span>September, 2021 — Present</span>
-
-              <p class="timeline-text">
-                <ul>
-                  <li class="timeline-text">
-                    • Contributed to the development of an industry-first <b>DevOps</b> feature, Blueprints, enabling efficient compliance management across large-scale dedicated device fleets for a leading <b>Mobile Device Management (MDM)</b> company.
-                  </li>
-                  <li class="timeline-text">
-                    • Engineered and deployed a <b>Device Policy Controller (DPC)</b> app, utilizing Google’s Android Device Policy Manager APIs, managing over <b>1 million+</b> devices across various OEMs.
-                  </li>
-                  <li class="timeline-text">
-                    • Contributed to the development of <b>Esper iOS agent</b>, leveraging Apple’s Mobile Device Management (MDM) protocols, improving cross-platform device management.
-                  </li>
-                  <li class="timeline-text">
-                    • Implemented <b>clean architecture</b> in applications,enhancing code readability and maintainability.
-                  </li>
-                  <li class="timeline-text">
-                    • Dramatically increased <b>unit-test case coverage from 40% to 95%</b>, significantly boosting code reliability. Achieved <b>100% integration test coverage</b> using Robotium, ensuring robust system functionality.
-                  </li>
-                  <li class="timeline-text">
-                    • Collaborated effectively with quality engineers, product management, design, and support teams, ensuring high-quality standards in all development phases.
-                  </li>
-                </ul>
-              </p>
-
-            </li>
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Software Developement Engineer</h4>
-              <h5 class="h5 timeline-item-title">Vyapar</h5>
-
-              <span>July, 2021 — September, 2021</span>
-
-              <p class="timeline-text">
-                <ul>
-                  <li class="timeline-text">
-                    • Developed and maintained the Vyapar app, a business <b>accounting software</b> with over <b>10M+ downloads</b>, optimizing <b>invoicing, inventory management, and accounting</b> for Indian small businesses.
-                  </li>
-                  <li class="timeline-text">
-                    • Integrated advanced <b>business analytics</b>, providing users with insightful reports to enhance business performance.
-                  </li>
-                </ul>
-              </p>
-            </li>
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Android Developer</h4>
-              <h5 class="h5 timeline-item-title">Collegedunia Web Private Limited</h5>
-
-              <span>July, 2020 — July, 2021</span>
-
-              <p class="timeline-text">
-                <ul>
-                  <li class="timeline-text">
-                    • Implementeda News feature using a self-developed Android Library/Artifact with <b>Kotlin and Android Architecture Components</b>, published via <b>Gitlab Package Registry. (FRIZZA, 5M+ downloads)</b>
-                  </li>
-                  <li class="timeline-text">
-                    • Led the development of <b>Raise Ticket</b> functionality and a complete <b>UI redesign using React Native</b>, improving user experience and app stability. <b>(Kickcash, 10K+ downloads)</b>
-                  </li>
-                </ul>
-              </p>
-            </li>
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Software Developement Intern</h4>
-              <h5 class="h5 timeline-item-title">NPCIL, DAE, Govt. of India</h5>
-
-              <span>May, 2019 — December, 2019</span>
-
-              <p class="timeline-text">
-                <ul>
-                  <li class="timeline-text">
-                    • Developed an interface between two web applications using <b>RESTful APIs</b>, ensuring synchronized data updates and improved workflow efficiency.
-                  </li>
-                  <li class="timeline-text">
-                    • Created a drag-and-drop tool with the <b>QT framework</b> for designing status trees in the organization’s safety system, enabling real-time reactor status monitoring.
-                  </li>
-                </ul>
-              </p>
-            </li>
           </ol>
 
         </section>
 
         <section class="skill">
 
-          <h3 class="h3 skills-title">My skills</h3>
-          <div class="row">
-            <div class="column">
+          <h3 class="h3 skills-title">Technical Expertise</h3>
+          <div class="skills-container">
 
-              <ul class="skills-list content-card">
+              <ul class="skills-list">
 
-                <li class="skills-item">
+                <li class="skills-item fade-in-up stagger-item">
 
                   <div class="title-wrapper">
-                    <h4 class="h4"> Languages </h4>
+                    <h4 class="h4 gradient-text">Mobile Platforms</h4>
                   </div>
 
                   <div class="title-wrapper">
-                    <h5 class="h5"> Java, Kotlin, Swift, TypeScript, C++, C </h5>
-                  </div>
-
-                  <!-- <div class="skill-progress-bg">
-                    <div class="skill-progress-fill" style="width: 90%;"></div>
-                  </div> -->
-
-                </li>
-
-                <li class="skills-item">
-
-                  <div class="title-wrapper">
-                    <h4 class="h4"> App development </h4>
-                  </div>
-
-                  <div class="title-wrapper">
-                    <h5 class="h5"> Jetpack Compose, SwiftUI, ReactNative, MVVM/MVC Architecture, DaggerHilt, Swinject, Coroutines, RxJava, Combine, MQTT, WebSockets </h5>
+                    <h5 class="h5">Swift, SwiftUI, Kotlin, Java, React Native</h5>
                   </div>
 
                 </li>
 
-                <li class="skills-item">
+                <li class="skills-item fade-in-up stagger-item">
 
                   <div class="title-wrapper">
-                    <h4 class="h4"> APIs, Tools and Database Integration </h4>
+                    <h4 class="h4 gradient-text">Architecture & Patterns</h4>
                   </div>
 
                   <div class="title-wrapper">
-                    <h5 class="h5"> REST, Firebase, APNs, Git, CI/CD, JIRA, MySQL, MongoDB, Postgresql </h5>
+                    <h5 class="h5">MVVM, Clean Architecture, Dependency Injection, Microservices</h5>
                   </div>
 
                 </li>
 
-                <li class="skills-item">
+                <li class="skills-item fade-in-up stagger-item">
 
                   <div class="title-wrapper">
-                    <h4 class="h4"> Testing Framework </h4>
+                    <h4 class="h4 gradient-text">Backend & Infrastructure</h4>
                   </div>
 
                   <div class="title-wrapper">
-                    <h5 class="h5"> Mockk, JUnit, XCTest, Jest </h5>
+                    <h5 class="h5">Go, Node.js, PostgreSQL, AWS, Docker, Kubernetes, CI/CD</h5>
+                  </div>
+
+                </li>
+
+                <li class="skills-item fade-in-up stagger-item">
+
+                  <div class="title-wrapper">
+                    <h4 class="h4 gradient-text">Quality Engineering</h4>
+                  </div>
+
+                  <div class="title-wrapper">
+                    <h5 class="h5">Test-Driven Development, XCTest, JUnit, Mockk, Integration Testing</h5>
+                  </div>
+
+                </li>
+
+                <li class="skills-item fade-in-up stagger-item">
+
+                  <div class="title-wrapper">
+                    <h4 class="h4 gradient-text">Enterprise Integration</h4>
+                  </div>
+
+                  <div class="title-wrapper">
+                    <h5 class="h5">RESTful APIs, GraphQL, MQTT, WebSockets, Firebase, APNs</h5>
+                  </div>
+
+                </li>
+
+                <li class="skills-item fade-in-up stagger-item">
+
+                  <div class="title-wrapper">
+                    <h4 class="h4 gradient-text">AI & Machine Learning</h4>
+                  </div>
+
+                  <div class="title-wrapper">
+                    <h5 class="h5">Core ML, TensorFlow, PyTorch, Computer Vision, Data Science</h5>
+                  </div>
+
+                </li>
+
+                <li class="skills-item fade-in-up stagger-item">
+
+                  <div class="title-wrapper">
+                    <h4 class="h4 gradient-text">Design & Collaboration</h4>
+                  </div>
+
+                  <div class="title-wrapper">
+                    <h5 class="h5">UI/UX Design, Figma, Design Systems, Agile, Team Leadership</h5>
+                  </div>
+
+                </li>
+
+                <li class="skills-item fade-in-up stagger-item">
+
+                  <div class="title-wrapper">
+                    <h4 class="h4 gradient-text">DevOps & Monitoring</h4>
+                  </div>
+
+                  <div class="title-wrapper">
+                    <h5 class="h5">Infrastructure as Code, Terraform, GitHub Actions, Performance Monitoring</h5>
                   </div>
 
                 </li>
               </ul>
-            </div>
-
-            <div class="column">
-              <ul class="skills-list content-card">
-
-                <li class="skills-item">
-
-                  <div class="title-wrapper">
-                    <h4 class="h4"> Machine Learning / Computer Vision </h4>
-                  </div>
-
-                  <div class="title-wrapper">
-                    <h5 class="h5"> NumPy, Pandas, OpenCV, scikit-learn, TensorFlow, Pytorch </h5>
-                  </div>
-
-                </li>
-
-                <li class="skills-item">
-
-                  <div class="title-wrapper">
-                    <h4 class="h4"> Design & Collaboration </h4>
-                  </div>
-
-                  <div class="title-wrapper">
-                    <h5 class="h5"> Figma, Sketch, Jira </h5>
-                  </div>
-
-                </li>
-              </ul>
-            </div>
           </div>
 
 
@@ -736,13 +612,11 @@
               <button class="active" data-filter-btn>All</button>
             </li>
             <li class="filter-item">
-              <button data-filter-btn>Android</button>
+              <button data-filter-btn>Company Projects</button>
             </li>
             <li class="filter-item">
               <button data-filter-btn>iOS</button>
             </li>
-
-
 
           </ul>
 
@@ -765,9 +639,8 @@
                 <button data-select-item style="background: white; color: black;">All</button>
               </li>
 
-
               <li class="select-item">
-                <button style="background: white; color: black;" data-select-item>Android</button>
+                <button style="background: white; color: black;" data-select-item>Company Projects</button>
               </li>
 
               <li class="select-item">
@@ -780,95 +653,144 @@
 
           <ul class="project-list">
 
-            <!-- <li class="project-item  active" data-filter-item data-category="android">
-              <a href="https://github.com/kunalyelne/Movie-App">
-
+            <!-- Butter Chicken Studios - Company -->
+            <li class="project-item active" data-filter-item data-category="company projects">
+              <a href="https://www.butterchickenstudios.com" target="_blank">
                 <figure class="project-img">
                   <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
+                    <ion-icon name="business-outline"></ion-icon>
                   </div>
-
-                  <img src="./assets/images/currency-converter-android.png " alt="smartsl" loading="lazy">
+                  <img src="./assets/images/bcs.png" alt="butter-chicken-studios" loading="lazy">
                 </figure>
 
-                <h3 class="project-title">Movies App - MVVM</h3>
-
-                <p class="project-category">Android</p>
-
+                <h3 class="project-title">Butter Chicken Studios</h3>
+                <p class="project-category">Company | Software Services Startup</p>
+                
+                <div class="project-stats">
+                  <div class="project-stat">
+                    <span class="project-stat-number">Founder</span>
+                    <span class="project-stat-label">& CEO</span>
+                  </div>
+                  <div class="project-stat">
+                    <span class="project-stat-number">AI</span>
+                    <span class="project-stat-label">Software</span>
+                  </div>
+                  <div class="project-stat">
+                    <span class="project-stat-number">2025</span>
+                    <span class="project-stat-label">Founded</span>
+                  </div>
+                </div>
               </a>
             </li>
 
-            <li class="project-item  active" data-filter-item data-category="android">
-              <a href="https://github.com/kunalyelne/Weather-App-Kotlin">
-
+            <!-- Fitlane Fitness Platform -->
+            <li class="project-item active" data-filter-item data-category="company projects">
+              <a href="https://www.fitlane.app" target="_blank">
                 <figure class="project-img">
                   <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
+                    <ion-icon name="fitness-outline"></ion-icon>
                   </div>
-
-                  <img src="./assets/images/weather-app.png" alt="weather-app" loading="lazy">
+                  <img src="./assets/images/fitlane.png" alt="fitlane-platform" loading="lazy">
                 </figure>
 
-                <h3 class="project-title">Weather App</h3>
-
-                <p class="project-category">Android</p>
-
+                <h3 class="project-title">Fitlane AI Fitness Platform</h3>
+                <p class="project-category">Product | SwiftUI • Go • AI/ML</p>
+                
+                <div class="project-stats">
+                  <div class="project-stat">
+                    <span class="project-stat-number">100K+</span>
+                    <span class="project-stat-label">User Scale</span>
+                  </div>
+                  <div class="project-stat">
+                    <span class="project-stat-number">35%</span>
+                    <span class="project-stat-label">Engagement ↑</span>
+                  </div>
+                  <div class="project-stat">
+                    <span class="project-stat-number">5min</span>
+                    <span class="project-stat-label">Deploy Time</span>
+                  </div>
+                </div>
               </a>
-            </li> -->
+            </li>
 
-            <li class="project-item  active" data-filter-item data-category="ios">
-              <a href="https://github.com/kunalyelne/Scrumdinger-iOS-App">
-
+            <!-- Scrumdinger iOS App -->
+            <li class="project-item active" data-filter-item data-category="ios">
+              <a href="https://github.com/kunalyelne/Scrumdinger-iOS-App" target="_blank">
                 <figure class="project-img">
                   <div class="project-item-icon-box">
                     <ion-icon name="eye-outline"></ion-icon>
                   </div>
-
                   <img src="./assets/images/scrumdinger.png" alt="scrumdinger" loading="lazy">
                 </figure>
 
-                <h3 class="project-title">Scrumdiner App</h3>
-
-                <p class="project-category">iOS</p>
-
+                <h3 class="project-title">Scrumdinger</h3>
+                <p class="project-category">iOS | SwiftUI • MVVM • Core Data</p>
+                
+                <div class="project-stats">
+                  <div class="project-stat">
+                    <span class="project-stat-number">SwiftUI</span>
+                    <span class="project-stat-label">Modern UI</span>
+                  </div>
+                  <div class="project-stat">
+                    <span class="project-stat-number">MVVM</span>
+                    <span class="project-stat-label">Clean Arch</span>
+                  </div>
+                </div>
               </a>
             </li>
           
-            <li class="project-item  active" data-filter-item data-category="ios">
-              <a href="https://github.com/kunalyelne/Currency-Converter-MVVM---iOS">
-
+            <!-- Currency Converter iOS -->
+            <li class="project-item active" data-filter-item data-category="ios">
+              <a href="https://github.com/kunalyelne/Currency-Converter-MVVM---iOS" target="_blank">
                 <figure class="project-img">
                   <div class="project-item-icon-box">
                     <ion-icon name="eye-outline"></ion-icon>
                   </div>
-
                   <img src="./assets/images/currency-converter-ios.png" alt="currency-converter-ios" loading="lazy">
                 </figure>
 
-                <h3 class="project-title">Currency Converter - MVVM - iOS</h3>
-
-                <p class="project-category">iOS</p>
-
+                <h3 class="project-title">Currency Converter</h3>
+                <p class="project-category">iOS | SwiftUI • Combine • REST APIs</p>
+                
+                <div class="project-stats">
+                  <div class="project-stat">
+                    <span class="project-stat-number">Combine</span>
+                    <span class="project-stat-label">Reactive</span>
+                  </div>
+                  <div class="project-stat">
+                    <span class="project-stat-number">REST</span>
+                    <span class="project-stat-label">Live Data</span>
+                  </div>
+                </div>
               </a>
             </li>
 
-            <li class="project-item  active" data-filter-item data-category="ios">
-              <a href="https://github.com/kunalyelne/we-split">
-
+            <!-- WeSplit iOS App -->
+            <li class="project-item active" data-filter-item data-category="ios">
+              <a href="https://github.com/kunalyelne/we-split" target="_blank">
                 <figure class="project-img">
                   <div class="project-item-icon-box">
                     <ion-icon name="eye-outline"></ion-icon>
                   </div>
-
                   <img src="./assets/images/we-split.png" alt="we-split" loading="lazy">
                 </figure>
 
-                <h3 class="project-title">We Split</h3>
-
-                <p class="project-category">iOS</p>
-
+                <h3 class="project-title">WeSplit</h3>
+                <p class="project-category">iOS | SwiftUI • Forms • Calculations</p>
+                
+                <div class="project-stats">
+                  <div class="project-stat">
+                    <span class="project-stat-number">SwiftUI</span>
+                    <span class="project-stat-label">Native</span>
+                  </div>
+                  <div class="project-stat">
+                    <span class="project-stat-number">Clean</span>
+                    <span class="project-stat-label">Code</span>
+                  </div>
+                </div>
               </a>
             </li>
+
           </ul>
 
         </section>
@@ -1133,6 +1055,7 @@
     - custom js link
   -->
   <script src="./assets/js/script.js"></script>
+  <script src="./assets/js/enhancements.js"></script>
 
   <!--
     - ionicon link

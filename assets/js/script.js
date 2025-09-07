@@ -7,16 +7,22 @@ const modeIcon = document.getElementById('mode-icon');
 // Function to toggle between light and dark mode
 function toggleDarkMode() {
   const themeLink = document.getElementById('theme-link');
-  if (themeLink.href.includes('lightmode.css')) {
-    themeLink.href = './assets/css/darkmode.css'; // Switch to dark mode CSS
-    modeIcon.classList.remove('fa-sun');
-    modeIcon.classList.add('fa-moon');
-    modeIcon.style.color = '#fff'; // Change icon color for dark mode
-  } else {
-    themeLink.href = './assets/css/lightmode.css'; // Switch to light mode CSS
+  const body = document.body;
+  
+  if (themeLink.href.includes('darkmode.css')) {
+    // Switch to light mode
+    themeLink.href = './assets/css/lightmode.css';
     modeIcon.classList.remove('fa-moon');
     modeIcon.classList.add('fa-sun');
-    modeIcon.style.color = '#333'; // Change icon color for light mode
+    modeIcon.style.color = '#333';
+    body.removeAttribute('data-theme');
+  } else {
+    // Switch to dark mode
+    themeLink.href = './assets/css/darkmode.css';
+    modeIcon.classList.remove('fa-sun');
+    modeIcon.classList.add('fa-moon');
+    modeIcon.style.color = '#fff';
+    body.setAttribute('data-theme', 'dark');
   }
 }
 
@@ -166,17 +172,59 @@ const pages = document.querySelectorAll("[data-page]");
 // add event to all nav link
 for (let i = 0; i < navigationLinks.length; i++) {
   navigationLinks[i].addEventListener("click", function () {
+    
+    // Remove active from all pages and nav links first
+    for (let j = 0; j < pages.length; j++) {
+      pages[j].classList.remove("active");
+    }
+    for (let j = 0; j < navigationLinks.length; j++) {
+      navigationLinks[j].classList.remove("active");
+    }
 
-    for (let i = 0; i < pages.length; i++) {
-      if (this.innerHTML.toLowerCase() === pages[i].dataset.page) {
-        pages[i].classList.add("active");
-        navigationLinks[i].classList.add("active");
+    // Add active to the clicked nav link
+    this.classList.add("active");
+    
+    // Find and activate the corresponding page
+    const targetPage = this.innerHTML.toLowerCase().trim();
+    console.log(`Looking for page: "${targetPage}"`); // Debug log
+    
+    let pageFound = false;
+    for (let j = 0; j < pages.length; j++) {
+      console.log(`Page ${j}: "${pages[j].dataset.page}"`); // Debug log
+      if (pages[j].dataset.page === targetPage) {
+        pages[j].classList.add("active");
+        pageFound = true;
+        console.log(`Activated page: ${targetPage}`); // Debug log
         window.scrollTo(0, 0);
-      } else {
-        pages[i].classList.remove("active");
-        navigationLinks[i].classList.remove("active");
+        break;
       }
+    }
+    
+    if (!pageFound) {
+      console.log(`Page not found for: ${targetPage}`); // Debug log
     }
 
   });
 }
+
+// Ensure at least one page is always visible on load
+document.addEventListener('DOMContentLoaded', function() {
+  setTimeout(() => {
+    const hasActivePage = document.querySelector('article.active');
+    console.log('Active page on load:', hasActivePage ? hasActivePage.dataset.page : 'none');
+    
+    if (!hasActivePage) {
+      console.log('No active page found, activating About page'); // Debug log
+      const aboutPage = document.querySelector('[data-page="about"]');
+      const aboutNav = document.querySelector('[data-nav-link]');
+      if (aboutPage) aboutPage.classList.add('active');
+      if (aboutNav) aboutNav.classList.add('active');
+    }
+    
+    // Also ensure projects page is properly configured
+    const projectsPage = document.querySelector('[data-page="projects"]');
+    if (projectsPage) {
+      console.log('Projects page found:', projectsPage.classList.toString());
+    }
+  }, 100);
+});
