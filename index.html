@@ -30,6 +30,83 @@
   <!-- Add Font Awesome CDN link -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
+  <style>
+    /* FINAL BUTTON OVERRIDE - Highest Priority */
+    .sidebar .info_more-btn,
+    .sidebar-info .info_more-btn,
+    button.info_more-btn {
+      background: rgba(31, 41, 55, 0.1) !important;
+      color: #1f2937 !important;
+      border: 1px solid rgba(31, 41, 55, 0.2) !important;
+      border-radius: 8px !important;
+      padding: 10px 16px !important;
+      font-size: 12px !important;
+      font-weight: 500 !important;
+      transition: all 0.2s ease !important;
+    }
+
+    .sidebar .info_more-btn::before,
+    .sidebar-info .info_more-btn::before,
+    button.info_more-btn::before {
+      display: none !important;
+    }
+
+    .sidebar .info_more-btn span,
+    .sidebar-info .info_more-btn span,
+    button.info_more-btn span {
+      color: #1f2937 !important;
+      font-weight: 500 !important;
+      display: inline !important;
+    }
+
+    .sidebar .info_more-btn ion-icon,
+    .sidebar-info .info_more-btn ion-icon,
+    button.info_more-btn ion-icon {
+      color: #1f2937 !important;
+    }
+
+    .sidebar .info_more-btn:hover,
+    .sidebar-info .info_more-btn:hover,
+    button.info_more-btn:hover,
+    .sidebar .info_more-btn:focus,
+    .sidebar-info .info_more-btn:focus,
+    button.info_more-btn:focus {
+      background: rgba(31, 41, 55, 0.15) !important;
+      border-color: rgba(31, 41, 55, 0.3) !important;
+    }
+
+    /* Dark theme button styling */
+    [data-theme="dark"] .sidebar .info_more-btn,
+    [data-theme="dark"] .sidebar-info .info_more-btn,
+    [data-theme="dark"] button.info_more-btn {
+      background: rgba(55, 65, 81, 0.6) !important;
+      color: #ffffff !important;
+      border: 1px solid rgba(255, 255, 255, 0.3) !important;
+    }
+
+    [data-theme="dark"] .sidebar .info_more-btn span,
+    [data-theme="dark"] .sidebar-info .info_more-btn span,
+    [data-theme="dark"] button.info_more-btn span {
+      color: #ffffff !important;
+    }
+
+    [data-theme="dark"] .sidebar .info_more-btn ion-icon,
+    [data-theme="dark"] .sidebar-info .info_more-btn ion-icon,
+    [data-theme="dark"] button.info_more-btn ion-icon {
+      color: #ffffff !important;
+    }
+
+    [data-theme="dark"] .sidebar .info_more-btn:hover,
+    [data-theme="dark"] .sidebar-info .info_more-btn:hover,
+    [data-theme="dark"] button.info_more-btn:hover,
+    [data-theme="dark"] .sidebar .info_more-btn:focus,
+    [data-theme="dark"] .sidebar-info .info_more-btn:focus,
+    [data-theme="dark"] button.info_more-btn:focus {
+      background: rgba(55, 65, 81, 0.8) !important;
+      border-color: rgba(255, 255, 255, 0.4) !important;
+    }
+  </style>
+
 </head>
 
 <body data-theme="dark">
@@ -62,10 +139,10 @@
           <p class="subtitle">Mobile & Backend Systems Architecture</p>
         </div>
 
-        <button style="background: white; color: black;" class="info_more-btn" data-sidebar-btn>
-          <span style="color: white ;" >Show Contact Details</span>
+        <button class="info_more-btn" data-sidebar-btn>
+          <span>Show Contact Details</span>
 
-          <ion-icon style="background: white; color: black;" name="chevron-down"></ion-icon>
+          <ion-icon name="chevron-down"></ion-icon>
         </button>
 
       </div>

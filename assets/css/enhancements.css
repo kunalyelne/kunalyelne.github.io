@@ -57,6 +57,17 @@
 
 [data-theme="dark"] .avatar-box {
   border: 2px solid rgba(255, 255, 255, 0.3) !important;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+[data-theme="dark"] .avatar-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 
 /* Dark Mode Main Content */
@@ -750,6 +761,17 @@
   transition: all 0.2s ease;
   position: relative;
   overflow: hidden;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.avatar-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 
 .avatar-box:hover {
@@ -768,6 +790,145 @@
   color: var(--premium-accent-1) !important;
   backdrop-filter: none;
   border: 1px solid rgba(37, 99, 235, 0.2);
+}
+
+/* Theme-compatible contact details button - high specificity */
+button.info_more-btn[data-sidebar-btn] {
+  background: rgba(31, 41, 55, 0.08) !important;
+  color: #1f2937 !important;
+  border: 1px solid rgba(31, 41, 55, 0.15) !important;
+  transition: all 0.2s ease !important;
+  border-radius: 8px !important;
+  padding: 8px 16px !important;
+}
+
+button.info_more-btn[data-sidebar-btn] span {
+  color: #1f2937 !important;
+  font-weight: 500 !important;
+  font-size: 12px !important;
+}
+
+button.info_more-btn[data-sidebar-btn] ion-icon {
+  color: #1f2937 !important;
+  margin-left: 6px !important;
+}
+
+button.info_more-btn[data-sidebar-btn]:hover {
+  background: rgba(31, 41, 55, 0.15) !important;
+  border-color: rgba(31, 41, 55, 0.25) !important;
+}
+
+[data-theme="dark"] button.info_more-btn[data-sidebar-btn] {
+  background: rgba(55, 65, 81, 0.5) !important;
+  color: #ffffff !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+}
+
+[data-theme="dark"] button.info_more-btn[data-sidebar-btn] span {
+  color: #ffffff !important;
+}
+
+[data-theme="dark"] button.info_more-btn[data-sidebar-btn] ion-icon {
+  color: #ffffff !important;
+}
+
+[data-theme="dark"] button.info_more-btn[data-sidebar-btn]:hover {
+  background: rgba(55, 65, 81, 0.7) !important;
+  border-color: rgba(255, 255, 255, 0.3) !important;
+}
+
+/* Additional override for any remaining button styles */
+.sidebar .info_more-btn,
+.sidebar-info .info_more-btn,
+button[data-sidebar-btn] {
+  background: rgba(31, 41, 55, 0.08) !important;
+  color: #1f2937 !important;
+  border: 1px solid rgba(31, 41, 55, 0.15) !important;
+}
+
+.sidebar .info_more-btn span,
+.sidebar-info .info_more-btn span,
+button[data-sidebar-btn] span {
+  color: #1f2937 !important;
+}
+
+.sidebar .info_more-btn ion-icon,
+.sidebar-info .info_more-btn ion-icon,
+button[data-sidebar-btn] ion-icon {
+  color: #1f2937 !important;
+}
+
+[data-theme="dark"] .sidebar .info_more-btn,
+[data-theme="dark"] .sidebar-info .info_more-btn,
+[data-theme="dark"] button[data-sidebar-btn] {
+  background: rgba(55, 65, 81, 0.5) !important;
+  color: #ffffff !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+}
+
+[data-theme="dark"] .sidebar .info_more-btn span,
+[data-theme="dark"] .sidebar-info .info_more-btn span,
+[data-theme="dark"] button[data-sidebar-btn] span {
+  color: #ffffff !important;
+}
+
+[data-theme="dark"] .sidebar .info_more-btn ion-icon,
+[data-theme="dark"] .sidebar-info .info_more-btn ion-icon,
+[data-theme="dark"] button[data-sidebar-btn] ion-icon {
+  color: #ffffff !important;
+}
+
+/* FINAL OVERRIDE - Must come last to override base theme files */
+.sidebar-info .info_more-btn {
+  background: rgba(31, 41, 55, 0.1) !important;
+  color: #1f2937 !important;
+  border: 1px solid rgba(31, 41, 55, 0.2) !important;
+  border-radius: 8px !important;
+  padding: 10px 16px !important;
+  font-size: 12px !important;
+  font-weight: 500 !important;
+  transition: all 0.2s ease !important;
+}
+
+.sidebar-info .info_more-btn::before {
+  display: none !important;
+}
+
+.sidebar-info .info_more-btn span {
+  color: #1f2937 !important;
+  font-weight: 500 !important;
+  display: inline !important;
+}
+
+.sidebar-info .info_more-btn ion-icon {
+  color: #1f2937 !important;
+}
+
+.sidebar-info .info_more-btn:hover,
+.sidebar-info .info_more-btn:focus {
+  background: rgba(31, 41, 55, 0.15) !important;
+  border-color: rgba(31, 41, 55, 0.3) !important;
+}
+
+/* Dark theme final overrides */
+[data-theme="dark"] .sidebar-info .info_more-btn {
+  background: rgba(55, 65, 81, 0.6) !important;
+  color: #ffffff !important;
+  border: 1px solid rgba(255, 255, 255, 0.3) !important;
+}
+
+[data-theme="dark"] .sidebar-info .info_more-btn span {
+  color: #ffffff !important;
+}
+
+[data-theme="dark"] .sidebar-info .info_more-btn ion-icon {
+  color: #ffffff !important;
+}
+
+[data-theme="dark"] .sidebar-info .info_more-btn:hover,
+[data-theme="dark"] .sidebar-info .info_more-btn:focus {
+  background: rgba(55, 65, 81, 0.8) !important;
+  border-color: rgba(255, 255, 255, 0.4) !important;
 }
 
 .contact-info .contact-link {
@@ -1452,6 +1613,26 @@ strong {
     right: 15px;
     padding: 10px 12px;
   }
+  
+  /* Prevent avatar cropping on mobile */
+  .avatar-box {
+    width: 100px !important;
+    height: 100px !important;
+    min-width: 100px;
+    min-height: 100px;
+  }
+  
+  .sidebar-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  .info-content {
+    min-width: 0;
+    text-align: center;
+  }
 }
 
 @media (max-width: 480px) {
@@ -1469,7 +1650,7 @@ strong {
   }
   
   .name {
-    font-size: 20px !important;
+    font-size: 18px !important;
   }
   
   .loading-text {
@@ -1480,6 +1661,27 @@ strong {
   .loader {
     width: 45px;
     height: 45px;
+  }
+  
+  /* Extra small screens avatar fix */
+  .avatar-box {
+    width: 100px !important;
+    height: 100px !important;
+    min-width: 100px;
+    min-height: 100px;
+  }
+  
+  .sidebar-info {
+    padding: 15px;
+  }
+  
+  .info-content {
+    margin: 10px 0;
+  }
+  
+  .subtitle {
+    font-size: 0.75rem !important;
+    margin-top: 2px;
   }
 }
 
