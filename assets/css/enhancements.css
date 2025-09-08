@@ -383,16 +383,78 @@
   background: #4b5563 !important;
 }
 
-/* Dark Mode Filter Buttons */
+/* IMPROVED DROPDOWN STYLING - Works with both themes */
+
+/* Base dropdown styles */
+.filter-select {
+  background: var(--white-1, #ffffff) !important;
+  color: var(--smoky-black, #1a1a1a) !important;
+  border: 1px solid rgba(0, 0, 0, 0.1) !important;
+  border-radius: 12px !important;
+  padding: 12px 16px !important;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  transition: all 0.2s ease !important;
+  cursor: pointer !important;
+}
+
+.filter-select:hover,
+.filter-select:focus {
+  border-color: rgba(0, 0, 0, 0.2) !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1) !important;
+}
+
+.select-list {
+  background: var(--white-1, #ffffff) !important;
+  border: 1px solid rgba(0, 0, 0, 0.1) !important;
+  border-radius: 12px !important;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15) !important;
+  overflow: hidden !important;
+}
+
+.select-item button {
+  background: transparent !important;
+  color: var(--smoky-black, #1a1a1a) !important;
+  border: none !important;
+  padding: 12px 16px !important;
+  width: 100% !important;
+  text-align: left !important;
+  font-size: 14px !important;
+  transition: all 0.2s ease !important;
+  cursor: pointer !important;
+}
+
+.select-item button:hover,
+.select-item button:focus {
+  background: rgba(0, 0, 0, 0.05) !important;
+}
+
+/* Dark theme dropdown overrides */
 [data-theme="dark"] .filter-select {
   background: #374151 !important;
   color: #ffffff !important;
-  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+}
+
+[data-theme="dark"] .filter-select:hover,
+[data-theme="dark"] .filter-select:focus {
+  border-color: rgba(255, 255, 255, 0.3) !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3) !important;
 }
 
 [data-theme="dark"] .select-list {
   background: #374151 !important;
-  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4) !important;
+}
+
+[data-theme="dark"] .select-item button {
+  color: #ffffff !important;
+}
+
+[data-theme="dark"] .select-item button:hover,
+[data-theme="dark"] .select-item button:focus {
+  background: rgba(255, 255, 255, 0.1) !important;
 }
 
 [data-theme="dark"] .select-item button {
@@ -1216,6 +1278,25 @@ button.form-btn span {
   transition: all var(--premium-transition);
 }
 
+/* FORCE PROJECT ITEMS TO BE VISIBLE WHEN ACTIVE */
+.project-item.active {
+  display: block !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+/* FAILSAFE: Show all project items in the projects section by default */
+[data-page="projects"] .project-item {
+  display: block !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+/* When filtering is applied, hide non-active items */
+[data-page="projects"] .project-item:not(.active) {
+  display: none !important;
+}
+
 .project-item:hover {
   transform: translateY(-3px);
 }
@@ -1614,24 +1695,173 @@ strong {
     padding: 10px 12px;
   }
   
-  /* Prevent avatar cropping on mobile */
-  .avatar-box {
-    width: 100px !important;
-    height: 100px !important;
-    min-width: 100px;
-    min-height: 100px;
+  /* MOBILE SIDEBAR FIXES - Complete solution with higher specificity */
+  .sidebar[data-sidebar] {
+    position: static !important;
+    margin-bottom: 20px !important;
+    max-height: none !important;
+    overflow: visible !important;
   }
   
-  .sidebar-info {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
+  .sidebar[data-sidebar] .sidebar-info {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    gap: 15px !important;
+    padding: 15px !important;
+    position: relative !important;
+    min-height: auto !important;
+    height: auto !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
   }
   
-  .info-content {
-    min-width: 0;
-    text-align: center;
+  /* Avatar positioning - Override inline width */
+  .sidebar[data-sidebar] .avatar-box {
+    width: 75px !important;
+    height: 75px !important;
+    min-width: 75px !important;
+    min-height: 75px !important;
+    margin: 0 !important;
+    flex-shrink: 0 !important;
+  }
+  
+  .sidebar[data-sidebar] .avatar-box img {
+    width: 75px !important;
+    height: 75px !important;
+    object-fit: cover !important;
+    border-radius: inherit !important;
+  }
+  
+  /* Content positioning - Full width without button */
+  .sidebar[data-sidebar] .info-content {
+    flex: 1 !important;
+    text-align: left !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    min-width: 0 !important;
+    max-width: none !important;
+    margin: 0 !important;
+    overflow: visible !important;
+    width: 100% !important;
+  }
+  
+  /* Hide button on mobile - always show contact details */
+  .sidebar[data-sidebar] .info_more-btn[data-sidebar-btn] {
+    display: none !important;
+  }
+  
+  /* Compact content typography with high specificity */
+  .sidebar[data-sidebar] .info-content .name {
+    font-size: 17px !important;
+    margin-bottom: 5px !important;
+    line-height: 1.2 !important;
+    font-weight: 600 !important;
+    margin-top: 0 !important;
+  }
+  
+  .sidebar[data-sidebar] .info-content .title {
+    font-size: 12px !important;
+    padding: 3px 8px !important;
+    margin-bottom: 4px !important;
+    display: inline-block !important;
+    margin-top: 0 !important;
+  }
+  
+  .sidebar[data-sidebar] .info-content .subtitle {
+    font-size: 13px !important;
+    line-height: 1.3 !important;
+    color: #4a5568 !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    font-weight: 400 !important;
+    white-space: normal !important;
+    word-wrap: break-word !important;
+    overflow-wrap: break-word !important;
+    hyphens: auto !important;
+    max-width: none !important;
+    width: auto !important;
+  }
+  
+  [data-theme="dark"] .sidebar[data-sidebar] .info-content .subtitle {
+    color: #d1d5db !important;
+  }
+  
+  /* Mobile contact details section - Always visible */
+  .sidebar[data-sidebar] .sidebar-info_more {
+    display: block !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    height: auto !important;
+    padding: 15px !important;
+    margin-top: 10px !important;
+  }
+  
+  /* Contact details styling - always visible */
+  .sidebar[data-sidebar] .contacts-list {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 12px !important;
+    margin-bottom: 15px !important;
+  }
+  
+  .sidebar[data-sidebar] .contact-item {
+    display: flex !important;
+    align-items: center !important;
+    gap: 10px !important;
+    padding: 8px 0 !important;
+  }
+  
+  .sidebar[data-sidebar] .contact-item .icon-box {
+    width: 35px !important;
+    height: 35px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    flex-shrink: 0 !important;
+  }
+  
+  .sidebar[data-sidebar] .contact-item .contact-info {
+    flex: 1 !important;
+    min-width: 0 !important;
+  }
+  
+  .sidebar[data-sidebar] .contact-link {
+    font-size: 13px !important;
+    text-decoration: none !important;
+    word-break: break-word !important;
+  }
+  
+  .sidebar[data-sidebar] .contact-info address {
+    font-size: 13px !important;
+    font-style: normal !important;
+    margin: 0 !important;
+  }
+  
+  .sidebar[data-sidebar] .social-list {
+    display: flex !important;
+    justify-content: center !important;
+    gap: 15px !important;
+    margin-top: 15px !important;
+  }
+  
+  .sidebar[data-sidebar] .social-item .social-link {
+    width: 40px !important;
+    height: 40px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    border-radius: 50% !important;
+  }
+  
+  .sidebar[data-sidebar] .separator {
+    height: 1px !important;
+    background: rgba(255, 255, 255, 0.1) !important;
+    margin: 12px 0 !important;
+  }
+  
+  [data-theme="dark"] .sidebar[data-sidebar] .separator {
+    background: rgba(255, 255, 255, 0.1) !important;
   }
 }
 

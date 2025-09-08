@@ -1,36 +1,13 @@
-// Premium Portfolio Enhancements JavaScript
+// Portfolio Enhancements JavaScript
 // Enhanced interactions, animations, and visual effects
 
 'use strict';
 
-// ===== LOADING SCREEN ===== //
+// ===== LOADING SCREEN REMOVED FOR SNAPPY EXPERIENCE ===== //
 document.addEventListener('DOMContentLoaded', function() {
-    // Create loading screen
-    const loadingScreen = document.createElement('div');
-    loadingScreen.className = 'loading-screen';
-    loadingScreen.innerHTML = `
-        <div class="loader"></div>
-        <div class="loading-text">KUNAL YELNE</div>
-    `;
-    document.body.prepend(loadingScreen);
-
-    // Hide loading screen after page load
-    window.addEventListener('load', function() {
-        setTimeout(() => {
-            loadingScreen.classList.add('hidden');
-            
-            // Initialize animations after loading
-            setTimeout(() => {
-                initializeAnimations();
-                createParticleBackground();
-            }, 500);
-            
-            // Remove loading screen from DOM
-            setTimeout(() => {
-                loadingScreen.remove();
-            }, 1000);
-        }, 1500); // Show loading for at least 1.5s
-    });
+    // Initialize animations immediately for snappy load
+    initializeAnimations();
+    createParticleBackground();
 });
 
 // ===== SUBTLE PARTICLE BACKGROUND ===== //
@@ -263,34 +240,8 @@ function initializeTextRevealAnimation() {
     });
 }
 
-// ===== ENHANCED PROJECT FILTER ANIMATION ===== //
-function enhanceProjectFilters() {
-    const filterButtons = document.querySelectorAll('[data-filter-btn]');
-    const projectItems = document.querySelectorAll('.project-item');
-    
-    filterButtons.forEach(button => {
-        button.addEventListener('click', function() {
-            const filter = this.textContent.toLowerCase();
-            
-            // Animate out
-            projectItems.forEach((item, index) => {
-                item.style.transition = 'all 0.3s ease';
-                item.style.transform = 'scale(0.8)';
-                item.style.opacity = '0';
-                
-                setTimeout(() => {
-                    if (filter === 'all' || item.dataset.category === filter) {
-                        item.classList.add('active');
-                        item.style.transform = 'scale(1)';
-                        item.style.opacity = '1';
-                    } else {
-                        item.classList.remove('active');
-                    }
-                }, index * 50);
-            });
-        });
-    });
-}
+// ===== ENHANCED PROJECT FILTER ANIMATION REMOVED ===== //
+// Project filtering is now handled by the main script.js to avoid conflicts
 
 // ===== FLOATING ACTION BUTTONS ===== //
 function createFloatingActionButtons() {
@@ -396,38 +347,13 @@ document.addEventListener('DOMContentLoaded', function() {
         animateSkillBars();
         initializeHoverEffects();
         initializeNavbarScrollEffect();
-        enhanceProjectFilters();
         createFloatingActionButtons();
-        initializeProjectsFilter(); // Initialize projects to show all by default
+        // Project filtering is handled by main script.js
     }, 800);
 });
 
-// ===== INITIALIZE PROJECTS FILTER ===== //
-function initializeProjectsFilter() {
-    // Show all projects by default
-    const filterFunc = window.filterFunc || function (selectedValue) {
-        const filterItems = document.querySelectorAll("[data-filter-item]");
-        
-        for (let i = 0; i < filterItems.length; i++) {
-            if (selectedValue === "all") {
-                filterItems[i].classList.add("active");
-            } else if (selectedValue === filterItems[i].dataset.category) {
-                filterItems[i].classList.add("active");
-            } else {
-                filterItems[i].classList.remove("active");
-            }
-        }
-    };
-    
-    // Set "All" as default
-    filterFunc("all");
-    
-    // Set first filter button as active
-    const firstFilterBtn = document.querySelector('[data-filter-btn]');
-    if (firstFilterBtn) {
-        firstFilterBtn.classList.add('active');
-    }
-}
+// ===== PROJECT FILTER INITIALIZATION REMOVED ===== //
+// This is now handled by the main script.js to avoid conflicts
 
 // ===== PERFORMANCE OPTIMIZATION ===== //
 // Debounce scroll events for better performance
@@ -514,17 +440,13 @@ function fixDarkModeToggle() {
             const body = document.body;
             const newIcon = document.getElementById('mode-icon');
             
-            console.log('Dark mode toggle clicked!'); // Debug log
-            
             if (themeLink.href.includes('darkmode.css')) {
-                console.log('Switching to light mode'); // Debug log
                 themeLink.href = './assets/css/lightmode.css';
                 newIcon.classList.remove('fa-moon');
                 newIcon.classList.add('fa-sun');
                 newIcon.style.color = '#333';
                 body.removeAttribute('data-theme');
             } else {
-                console.log('Switching to dark mode'); // Debug log
                 themeLink.href = './assets/css/darkmode.css';
                 newIcon.classList.remove('fa-sun');
                 newIcon.classList.add('fa-moon');
@@ -532,8 +454,6 @@ function fixDarkModeToggle() {
                 body.setAttribute('data-theme', 'dark');
             }
         });
-    } else {
-        console.log('Mode toggle elements not found'); // Debug log
     }
 }
 
@@ -542,4 +462,3 @@ setTimeout(() => {
     fixDarkModeToggle();
 }, 1000);
 
-console.log('🚀 Premium Portfolio Enhancements Loaded Successfully!');

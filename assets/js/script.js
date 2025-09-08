@@ -186,22 +186,15 @@ for (let i = 0; i < navigationLinks.length; i++) {
     
     // Find and activate the corresponding page
     const targetPage = this.innerHTML.toLowerCase().trim();
-    console.log(`Looking for page: "${targetPage}"`); // Debug log
     
     let pageFound = false;
     for (let j = 0; j < pages.length; j++) {
-      console.log(`Page ${j}: "${pages[j].dataset.page}"`); // Debug log
       if (pages[j].dataset.page === targetPage) {
         pages[j].classList.add("active");
         pageFound = true;
-        console.log(`Activated page: ${targetPage}`); // Debug log
         window.scrollTo(0, 0);
         break;
       }
-    }
-    
-    if (!pageFound) {
-      console.log(`Page not found for: ${targetPage}`); // Debug log
     }
 
   });
@@ -209,22 +202,21 @@ for (let i = 0; i < navigationLinks.length; i++) {
 
 // Ensure at least one page is always visible on load
 document.addEventListener('DOMContentLoaded', function() {
-  setTimeout(() => {
-    const hasActivePage = document.querySelector('article.active');
-    console.log('Active page on load:', hasActivePage ? hasActivePage.dataset.page : 'none');
-    
-    if (!hasActivePage) {
-      console.log('No active page found, activating About page'); // Debug log
-      const aboutPage = document.querySelector('[data-page="about"]');
-      const aboutNav = document.querySelector('[data-nav-link]');
-      if (aboutPage) aboutPage.classList.add('active');
-      if (aboutNav) aboutNav.classList.add('active');
-    }
-    
-    // Also ensure projects page is properly configured
-    const projectsPage = document.querySelector('[data-page="projects"]');
-    if (projectsPage) {
-      console.log('Projects page found:', projectsPage.classList.toString());
-    }
-  }, 100);
+  const hasActivePage = document.querySelector('article.active');
+  
+  if (!hasActivePage) {
+    const aboutPage = document.querySelector('[data-page="about"]');
+    const aboutNav = document.querySelector('[data-nav-link]');
+    if (aboutPage) aboutPage.classList.add('active');
+    if (aboutNav) aboutNav.classList.add('active');
+  }
+  
+  // Initialize projects filter to show all projects by default
+  filterFunc("all");
+  
+  // Ensure first filter button is active
+  const firstFilterBtn = document.querySelector('[data-filter-btn]');
+  if (firstFilterBtn && !firstFilterBtn.classList.contains('active')) {
+    firstFilterBtn.classList.add('active');
+  }
 });
