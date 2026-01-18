@@ -4,6 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        (function () {
+            const savedTheme = localStorage.getItem('theme');
+            const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+            document.documentElement.setAttribute('data-theme', savedTheme || systemTheme);
+        })();
+    </script>
     <title>Kunal Yelne | Senior Software Engineer</title>
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
 
@@ -58,6 +65,10 @@
             </a>
         </div>
     </nav>
+    <button id="themeToggle" class="theme-toggle" aria-label="Toggle dark mode">
+        <i class="ph ph-moon"></i>
+        <i class="ph ph-sun"></i>
+    </button>
 
     <!-- Hero Section - Bento Grid -->
     <section id="hero" class="hero-section">
@@ -181,7 +192,7 @@
                     <a href="https://github.com/kunalyelne" target="_blank" class="social-square social-github">
                         <i class="ph ph-github-logo"></i>
                     </a>
-                    <a href="https://x.com/kunalyelne" target="_blank" class="social-square social-x">
+                    <a href="https://x.com/kunal_yelne" target="_blank" class="social-square social-x">
                         <i class="ph ph-x-logo"></i>
                     </a>
                     <a href="https://medium.com/@kunal_yelne" target="_blank" class="social-square social-medium">

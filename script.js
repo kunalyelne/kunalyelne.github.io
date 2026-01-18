@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initSmoothScroll();
     initNavHighlight();
     initScrollIndicator();
+    initThemeToggle();
 });
 
 /* =============================================
@@ -145,6 +146,43 @@ function initScrollIndicator() {
         const workSection = document.getElementById('work');
         if (workSection) {
             workSection.scrollIntoView({ behavior: 'smooth' });
+        }
+    });
+}
+
+/* =============================================
+   THEME TOGGLE (Dark Mode)
+   ============================================= */
+function initThemeToggle() {
+    const themeToggle = document.getElementById('themeToggle');
+    const html = document.documentElement;
+
+    // Check for saved theme or system preference
+    const savedTheme = localStorage.getItem('theme');
+    const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    const currentTheme = savedTheme || systemTheme;
+
+    // Apply initial theme
+    html.setAttribute('data-theme', currentTheme);
+
+    themeToggle.addEventListener('click', () => {
+        const targetTheme = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+
+        html.setAttribute('data-theme', targetTheme);
+        localStorage.setItem('theme', targetTheme);
+
+        // Add a little pop animation to the button
+        themeToggle.style.transform = 'scale(1.2) rotate(15deg)';
+        setTimeout(() => {
+            themeToggle.style.transform = '';
+        }, 200);
+    });
+
+    // Listen for system theme changes
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+        if (!localStorage.getItem('theme')) {
+            const newTheme = e.matches ? 'dark' : 'light';
+            html.setAttribute('data-theme', newTheme);
         }
     });
 }
