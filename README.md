@@ -26,7 +26,7 @@ Senior Software Engineer based in Bangalore, India. I specialize in the intersec
 
 ## Links 🔗
 
-- **Portfolio**: [https://kunalyelne.github.io/portfolio](https://kunalyelne.github.io/portfolio)
+- **Portfolio**: [https://kunalyelne.github.io](https://kunalyelne.github.io)
 - **LinkedIn**: [kunalyelne](https://www.linkedin.com/in/kunalyelne)
 - **GitHub**: [@kunalyelne](https://github.com/kunalyelne)
 - **Medium**: [kunal_yelne](https://medium.com/@kunal_yelne)
