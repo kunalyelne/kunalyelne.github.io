@@ -2280,7 +2280,7 @@ a {
         flex-direction: column !important;
         align-items: center;
         text-align: center;
-        gap: 0 !important;
+        gap: 16px !important;
         padding: 32px !important;
         background: var(--bg-card-alt);
         border-radius: var(--radius-lg);
