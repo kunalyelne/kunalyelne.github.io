@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initNavHighlight();
     initScrollIndicator();
     initThemeToggle();
+    initTypingEffect();
 });
 
 /* =============================================
@@ -185,6 +186,104 @@ function initThemeToggle() {
             html.setAttribute('data-theme', newTheme);
         }
     });
+}
+
+/* =============================================
+   TYPING EFFECT
+   ============================================= */
+function initTypingEffect() {
+    const titleElement = document.querySelector('.bento-title h1');
+    if (!titleElement) return;
+
+    const staticLines = ["Engineer,", "Builder,"];
+    const rotatingAdjectives = [
+        "Systems Thinker",
+        "Product Minded",
+        "0 → 1 Builder",
+        "Scalability Focused",
+        "Experience First"
+    ];
+
+    // Clear initial text
+    titleElement.innerHTML = '';
+
+    // Create spans for static lines
+    staticLines.forEach(() => {
+        const span = document.createElement('span');
+        span.style.display = 'block';
+        titleElement.appendChild(span);
+    });
+
+    // Create span for rotating adjective
+    const rotatingSpan = document.createElement('span');
+    rotatingSpan.classList.add('accent');
+    rotatingSpan.style.display = 'block';
+    titleElement.appendChild(rotatingSpan);
+
+    let adjectiveIndex = 0;
+
+    async function startTyping() {
+        // Wait for bento-card entrance animation to settle
+        await new Promise(resolve => setTimeout(resolve, 800));
+
+        const spans = titleElement.querySelectorAll('span');
+
+        // Type static lines one by one
+        for (let i = 0; i < staticLines.length; i++) {
+            spans[i].classList.add('typing-active');
+            await typeEffect(spans[i], staticLines[i]);
+            // Remove cursor from finished static line
+            spans[i].classList.remove('typing-active');
+        }
+
+        // Continuous loop for rotating adjectives
+        while (true) {
+            const currentAdjective = rotatingAdjectives[adjectiveIndex];
+            rotatingSpan.classList.add('typing-active');
+
+            await typeEffect(rotatingSpan, currentAdjective);
+
+            // Hold the word for a while
+            await new Promise(resolve => setTimeout(resolve, 2500));
+
+            // Delete the word
+            await deleteEffect(rotatingSpan);
+
+            adjectiveIndex = (adjectiveIndex + 1) % rotatingAdjectives.length;
+
+            // Small pause before typing next word
+            await new Promise(resolve => setTimeout(resolve, 500));
+        }
+    }
+
+    function typeEffect(element, text, speed = 60) {
+        return new Promise(resolve => {
+            let i = 0;
+            const interval = setInterval(() => {
+                element.textContent += text[i];
+                i++;
+                if (i === text.length) {
+                    clearInterval(interval);
+                    resolve();
+                }
+            }, speed);
+        });
+    }
+
+    function deleteEffect(element, speed = 40) {
+        return new Promise(resolve => {
+            const interval = setInterval(() => {
+                if (element.textContent.length > 0) {
+                    element.textContent = element.textContent.slice(0, -1);
+                } else {
+                    clearInterval(interval);
+                    resolve();
+                }
+            }, speed);
+        });
+    }
+
+    startTyping();
 }
 
 /* =============================================
