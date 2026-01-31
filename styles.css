@@ -1,6 +1,6 @@
 /* =============================================
    KUNAL YELNE PORTFOLIO - CSS STYLES
-   Warm Bento-Box Aesthetic - Inspired by janzi.in
+   Bento-Box Design - Inspired by janzi.in
    ============================================= */
 
 /* =============================================
@@ -1069,7 +1069,7 @@ a {
     display: flex;
     flex-direction: row-reverse;
     align-items: flex-start;
-    padding-top: 16px;
+    padding-top: 14px;
     padding-right: 16px;
 }
 
@@ -1140,9 +1140,6 @@ a {
 .duration {
     font-size: 0.85rem;
     color: var(--text-muted);
-    background: var(--bg-card-alt);
-    padding: 4px 12px;
-    border-radius: var(--radius-sm);
     background: var(--bg-card-alt);
     padding: 4px 12px;
     border-radius: var(--radius-sm);
@@ -2279,12 +2276,12 @@ a {
         max-height: 300px;
     }
 
-    .bento-social-row {
+    .bento-grid .bento-social-row {
         flex-direction: column !important;
         align-items: center;
         text-align: center;
-        gap: 32px;
-        padding: 40px !important;
+        gap: 0 !important;
+        padding: 32px !important;
         background: var(--bg-card-alt);
         border-radius: var(--radius-lg);
     }
@@ -2318,13 +2315,28 @@ a {
     }
 
     .about-grid,
-    .projects-grid {
+    .projects-grid,
+    .skills-grid {
         grid-template-columns: 1fr;
     }
 
     .timeline-item {
         grid-template-columns: 1fr;
         padding-left: 40px;
+    }
+
+    .duration {
+        font-size: 0.75rem;
+        padding: 4px 8px;
+        white-space: nowrap;
+        flex-shrink: 0;
+    }
+
+    .timeline-year {
+        flex-direction: row;
+        justify-content: flex-start;
+        padding-right: 0;
+        padding-top: 14px;
     }
 
     .timeline-line {
