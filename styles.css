@@ -625,10 +625,6 @@ a {
     transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
-.bento-currently:hover .currently-icon i {
-    transform: rotate(360deg);
-}
-
 .currently-content {
     display: flex;
     flex-direction: column;
@@ -756,9 +752,6 @@ a {
     transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
-.bento-previous:hover .previous-icon i {
-    transform: rotate(360deg);
-}
 
 /* Say Hi - smaller */
 .bento-cta {
